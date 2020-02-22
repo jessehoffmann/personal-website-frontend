@@ -1,3 +1,7 @@
+.about-page {
+  display: none;
+}
+
 header,
 main,
 footer,
@@ -16,9 +20,7 @@ body {
   margin: 0px;
 }
 
-h4,
-h5,
-h6 {
+h4 {
   text-align: center;
   font-size: 24px;
   color: black;
@@ -103,7 +105,7 @@ a {
   background-color: white;
 }
 
-.project1, .project2 {
+.project1, .project2, .project3 {
   margin-bottom: 18px;
 }
 
@@ -126,6 +128,7 @@ a {
   font-color: black;
   padding-left: 3%;
   padding-right: 63%;
+  font-size:
 }
 
 .links {
@@ -165,11 +168,11 @@ a {
   .blocks {
     margin: 10px;
   }
-  .project1, .project2 {
+  .project1, .project2, .project3 {
     margin-bottom: 20px;
   }
   .project-titles {
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 
