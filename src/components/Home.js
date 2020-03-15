@@ -10,6 +10,8 @@ import Website from '../static/img/website.jpg';
 //Styles
 import '../static/css/portfolio_style.css';
 
+import NavBar from './NavBar';
+
 class Home extends Component {
     constructor(props) {
         super(props)
@@ -18,52 +20,12 @@ class Home extends Component {
             scrolling: true
         }
 
-        //this.handleScroll = this.handleScroll.bind(this)
     };
-    /*
 
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll)
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll)
-    }
-    
-    handleScroll(event) {
-        let scroll = event.srcElement.body.scrollTop,
-            //offset = event.srcElement.header.offset.top,
-            itemTranslate = Math.min(0, scroll/3 - 60)
-
-        console.log(scroll);
-    
-        if (offset != null && scroll > offset) {
-            this.setState({
-                scrolling: true
-            })
-        } else {
-            this.setState({
-                scrolling: true
-            })
-        }
-        
-    }
-    */
-
-
-    render() {
-        const { scrolling } = this.state;
-        
+    render() {        
         return (
             <div>
                 <div className="content">
-                    <div class="header">
-                        <header className="sticky">
-                            <div class="center-header">
-                                <h1 class="header-title">Jesse Thomas Hoffmann</h1>
-                            </div>
-                        </header>
-                    </div>
                     <img className="main-image" src={Landscape} />
                     <div class="featured-work">
                         <h3 class="featured-work-title">Featured Coding Projects</h3>
@@ -100,10 +62,6 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
-                    <footer>
-                        <p class="footer-text">Jesse Thomas Hoffmann</p>
-                        <p class="footer-texttwo">Software Developer</p>
-                    </footer>
                 </div>
             </div>
         )
