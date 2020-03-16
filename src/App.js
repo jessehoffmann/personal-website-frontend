@@ -38,8 +38,7 @@ class App extends Component {
                 <footer>
                         <p class="footer-text">Jesse Thomas Hoffmann</p>
                         <br />
-                        <p class="footer-text-two">Software Developer</p>
-                        <p class="footer-text-three">California REALTOR®</p>
+                        <p class="footer-text-three">Software Developer</p>
                 </footer>
             </div>
         </Router>

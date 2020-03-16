@@ -20,10 +20,6 @@ section {
   margin-top: 30px;
 }
 
-.about {
-  height: 550px;
-}
-
 header {
   padding: 12px;
   margin: 0px;
@@ -90,7 +86,7 @@ a {
   margin: 0px;
   margin-top: 5px;
   margin-left: 20px;
-  margin-right: 230px;
+  margin-right: 370px;
   height: 50px;
   vertical-align: bottom;
 }
@@ -173,6 +169,7 @@ a {
   color: black;
   padding-left: 3%;
   padding-right: 63%;
+  text-indent: 25px;
 }
 
 .links {

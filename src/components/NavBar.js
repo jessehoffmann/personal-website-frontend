@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 //Assets
-import Monogram from '../static/img/monogram.jpg';
+import Monogram from '../static/img/monogram.png';
 
 //Styles
 import '../static/css/portfolio_style.css';
@@ -59,13 +59,18 @@ class NavBar extends Component {
             <div>
                 <header className={scrolling ? "sticky" : null}>
                     <div className="center-header">
-                        <img src={Monogram} style={{height: "50px", width:"50px", marginLeft: "20px", marginTop: "4px", borderRadius: "15px", borderWidth: "1px", borderStyle: "solid"}} />
-                        <h1 className="header-title">
-                            <Link to="/">Jesse Thomas Hoffmann</Link>
-                        </h1>
+                        <Link to="/">
+                            <img src={Monogram} style={{height: "50px", width:"50px", marginLeft: "20px", marginTop: "4px", objectFit: "contain"}} />
+                        </Link>
+
+                            <h1 className="header-title">
+                                Jesse Thomas Hoffmann
+                            </h1>
+                        {/*
                         <h3 className="header-links">
                             <a href="https://jessehoffmann.kw.com" target="_blank">REALTOR®</a>
                         </h3>
+                        */}
                         <h3 className="header-links">
                             <Link to="/about">About</Link>
                         </h3>

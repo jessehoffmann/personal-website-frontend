@@ -6,6 +6,7 @@ import Catalog from '../static/img/catalog.jpg';
 import Movie from '../static/img/movie.jpg';
 import Map from '../static/img/map.jpg';
 import Website from '../static/img/website.jpg';
+import Portfolio from '../static/img/portfolio.jpg';
 
 //Styles
 import '../static/css/portfolio_style.css';
@@ -54,9 +55,9 @@ class Home extends Component {
                                 </div>
                                 <div class="blocks project4">
                                     <a href="https://github.com/jessehoffmann/Personal-Website" target="_blank">
-                                        <img class="thumbnails" alt="Website" src={Website} />
-                                        <h4 class="project-titles">Portfolio Website</h4>
-                                        <p class="project-description">This website! My personal front-end website built with React/Redux and AWS S3.</p>
+                                        <img class="thumbnails" alt="Website" src={Portfolio} />
+                                        <h4 class="project-titles">Portfolio</h4>
+                                        <p class="project-description">My portfolio website, which is the website you're looking at right now! This S3 bucket based website was built with React and utilizes react-router-dom for page routing.</p>
                                     </a>
                                 </div>
                             </div>
