@@ -10,7 +10,9 @@ import {
 
 import Home from './components/Home';
 import About from './components/About';
+import Contact from './components/Contact';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 //Styles
 import './static/css/portfolio_style.css';
@@ -28,18 +30,17 @@ class App extends Component {
                     <Route path="/about">
                         <About />
                     </Route>
-                    <Route path="/users">
-                    </Route>
+                    {/*
+                        <Route path="/contact">
+                            <Contact />
+                        </Route>
+                    */}
                     <Route path="/">
                         <Home />
                     </Route>
                 </Switch>
-
-                <footer>
-                        <p class="footer-text">Jesse Thomas Hoffmann</p>
-                        <br />
-                        <p class="footer-text-three">Software Developer</p>
-                </footer>
+                
+                <Footer />
             </div>
         </Router>
         );

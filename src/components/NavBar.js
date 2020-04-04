@@ -74,6 +74,11 @@ class NavBar extends Component {
                         <h3 className="header-links">
                             <Link to="/about">About</Link>
                         </h3>
+                        {/*
+                        <h3 className="header-links">
+                            <Link to="/contact">Contact</Link>
+                        </h3>
+                        */}
                     </div>
                 </header>
             </div>
