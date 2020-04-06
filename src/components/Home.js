@@ -32,6 +32,7 @@ class Home extends Component {
                         <h3 class="featured-work-title">Featured Coding Projects</h3>
                         <div class="flex-container">
                             <div class="flex-container">
+                                {/*Test*/}
                                 <div class="blocks project4">
                                     <a href="https://github.com/jessehoffmann/Personal-Website" target="_blank">
                                         <img class="thumbnails" alt="Website" src={Portfolio} />
