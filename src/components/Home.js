@@ -21,7 +21,7 @@ class Home extends Component {
             scrolling: true
         }
 
-    };
+    };s
 
     render() {        
         return (
@@ -32,6 +32,13 @@ class Home extends Component {
                         <h3 class="featured-work-title">Featured Coding Projects</h3>
                         <div class="flex-container">
                             <div class="flex-container">
+                                <div class="blocks project4">
+                                    <a href="https://github.com/jessehoffmann/Personal-Website" target="_blank">
+                                        <img class="thumbnails" alt="Website" src={Portfolio} />
+                                        <h4 class="project-titles">Portfolio</h4>
+                                        <p class="project-description">My portfolio website, which is the website you're looking at right now! This S3 bucket based website was built with React, react-router-dom for page routing, and AWS Cloudfront for securing connections.</p>
+                                    </a>
+                                </div>
                                 <div class="blocks project1">
                                     <a href="https://github.com/jessehoffmann/Catalog/tree/master/catalog" target="_blank">
                                         <img class="thumbnails" alt="Catalog" src={Catalog} />
@@ -51,13 +58,6 @@ class Home extends Component {
                                         <img class="thumbnails" alt="Map" src={Map} />
                                         <h4 class="project-titles">Neighborhood Map</h4>
                                         <p class="project-description">Javascript application that utilizes Flask framework and Ajax (jQuery).</p>
-                                    </a>
-                                </div>
-                                <div class="blocks project4">
-                                    <a href="https://github.com/jessehoffmann/Personal-Website" target="_blank">
-                                        <img class="thumbnails" alt="Website" src={Portfolio} />
-                                        <h4 class="project-titles">Portfolio</h4>
-                                        <p class="project-description">My portfolio website, which is the website you're looking at right now! This S3 bucket based website was built with React and utilizes react-router-dom for page routing.</p>
                                     </a>
                                 </div>
                             </div>
