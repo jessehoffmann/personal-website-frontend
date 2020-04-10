@@ -32,7 +32,7 @@ class About extends Component {
                         <h3 className="featured-work-title" style={{padding:"30px", paddingBottom:"20px"}}>About Me</h3>
                         <div style={{margin:"40px", marginTop:"0px", textIndent:"25px"}}>
                             <img src={Headshot} style={{width:"200px", height: "250px", float:"left", marginLeft: "50px", marginRight: "60px", marginBottom: "30px", objectFit: "cover", borderRadius: "15px"}} />
-                            <div >
+                            <div>
                                 <p>
                                     Jesse Thomas Hoffmann was born in Valencia, California and raised in Thousand Oaks. After graduating from Thousand Oaks High School, he attended the University of California – Berkeley where he studied computer science.
                                 </p>

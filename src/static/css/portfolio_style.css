@@ -150,7 +150,6 @@ a {
 .thumbnails {
   width: 60%;
   height: 100%;
-  max-height: 200px;
   vertical-align: top;
   float: right;
   object-fit: cover;
@@ -167,9 +166,18 @@ a {
 
 .project-description {
   color: black;
-  padding-left: 3%;
-  padding-right: 63%;
+  padding-left: 15px;
+  padding-right: 15px;
   text-indent: 25px;
+  margin-bottom: 0px;
+}
+
+.project-description-bulletpoints {
+  margin: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 11px;
+  text-indent: -11px;
 }
 
 .links {
@@ -292,8 +300,8 @@ input:-webkit-autofill:active {
     font-size: 11px;
   }
   .project-description {
-    padding-left: 2%;
-    padding-right: 62%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
