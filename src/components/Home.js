@@ -29,7 +29,7 @@ class Home extends Component {
                 <div className="content">
                     <img className="main-image" src={Landscape} />
                     <div class="featured-work">
-                        <h3 class="featured-work-title">Featured Coding Projects</h3>
+                        <h3 class="featured-work-title">My Featured Coding Projects</h3>
                         <div class="flex-container">
                             <div class="flex-container">
                                 {/*Test*/}
@@ -37,7 +37,7 @@ class Home extends Component {
                                     <a href="https://github.com/jessehoffmann/Personal-Website" target="_blank">
                                         <img class="thumbnails" alt="Website" src={Portfolio} />
                                         <h4 class="project-titles">Portfolio</h4>
-                                        <p class="project-description">My portfolio website, which is the website you're looking at right now! This S3 bucket based website was built with React, react-router-dom for page routing, and AWS Cloudfront for securing connections.</p>
+                                        <p class="project-description">The website you're looking at right now! This S3 bucket based website was built with React, react-router-dom for page routing, and AWS Cloudfront for securing connections.</p>
                                     </a>
                                 </div>
                                 <div class="blocks project1">
