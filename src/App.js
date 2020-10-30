@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-//import logo from './static/logo.svg';
+
+import Landscape from './static/img/daylight.jpg';
+
 //import './App.css';
 import {
     BrowserRouter as Router,
@@ -21,6 +23,9 @@ class App extends Component {
     render() {
         return (
         <Router>
+            {/*
+            <div style={{backgroundImage: `url(${Landscape})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
+            */}
             <div>
                 <NavBar />
 

@@ -26,9 +26,11 @@ class Home extends Component {
     render() {        
         return (
             <div>
-                <div className="content">
-                    <img className="main-image" src={Landscape} />
-                    <div className="featured-work">
+                <div className="content" style={{backgroundColor: "inherit"}}>
+                    {
+                        <img className="main-image" src={Landscape} />
+                    }
+                    <div className="featured-work" style={{backgroundColor: "inherit"}}>
                         <h3 className="featured-work-title">My Featured Coding Projects</h3>
                         <div className="flex-container">
                             <div className="flex-container">
