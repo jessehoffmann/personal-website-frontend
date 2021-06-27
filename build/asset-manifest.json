@@ -1,22 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.d14d1f4c.chunk.css",
-    "main.js": "/static/js/main.cbf95e49.chunk.js",
-    "main.js.map": "/static/js/main.cbf95e49.chunk.js.map",
+    "main.js": "/static/js/main.01074f2e.chunk.js",
+    "main.js.map": "/static/js/main.01074f2e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.92e1f69d.js",
     "runtime-main.js.map": "/static/js/runtime-main.92e1f69d.js.map",
-    "static/js/2.b44e5878.chunk.js": "/static/js/2.b44e5878.chunk.js",
-    "static/js/2.b44e5878.chunk.js.map": "/static/js/2.b44e5878.chunk.js.map",
+    "static/js/2.bc11397c.chunk.js": "/static/js/2.bc11397c.chunk.js",
+    "static/js/2.bc11397c.chunk.js.map": "/static/js/2.bc11397c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4903fe2576ad2a9d5a59e27b1f355c7a.js": "/precache-manifest.4903fe2576ad2a9d5a59e27b1f355c7a.js",
+    "precache-manifest.ec18e27957e2f54ba8fd500efbddcd74.js": "/precache-manifest.ec18e27957e2f54ba8fd500efbddcd74.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.d14d1f4c.chunk.css.map": "/static/css/main.d14d1f4c.chunk.css.map",
-    "static/js/2.b44e5878.chunk.js.LICENSE.txt": "/static/js/2.b44e5878.chunk.js.LICENSE.txt",
+    "static/js/2.bc11397c.chunk.js.LICENSE.txt": "/static/js/2.bc11397c.chunk.js.LICENSE.txt",
+    "static/media/Jesse Hoffmann Resume.pdf": "/static/media/Jesse Hoffmann Resume.1d58ff0e.pdf",
     "static/media/catalog.jpg": "/static/media/catalog.06c27620.jpg",
     "static/media/daylight.jpg": "/static/media/daylight.15a2aed1.jpg",
-    "static/media/facebook.png": "/static/media/facebook.aa9d292a.png",
-    "static/media/headshot.jpg": "/static/media/headshot.2d2681f6.jpg",
-    "static/media/instagram.png": "/static/media/instagram.6c6c8c73.png",
+    "static/media/headshot.jpg": "/static/media/headshot.824d463e.jpg",
     "static/media/map.jpg": "/static/media/map.58513690.jpg",
     "static/media/monogram.png": "/static/media/monogram.4a5f9bce.png",
     "static/media/movie.jpg": "/static/media/movie.3228ff41.jpg",
@@ -25,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.92e1f69d.js",
-    "static/js/2.b44e5878.chunk.js",
+    "static/js/2.bc11397c.chunk.js",
     "static/css/main.d14d1f4c.chunk.css",
-    "static/js/main.cbf95e49.chunk.js"
+    "static/js/main.01074f2e.chunk.js"
   ]
 }

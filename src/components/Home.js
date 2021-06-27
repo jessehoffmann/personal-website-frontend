@@ -35,7 +35,7 @@ class Home extends Component {
                         <div className="flex-container">
                             <div className="flex-container">
                                 {/*Test*/}
-                                <div className="blocks project4" style={{height:"270px"}}>
+                                <div className="blocks project4">
                                     <a href="https://github.com/jessehoffmann/Personal-Website" target="_blank">
                                         <img className="thumbnails" alt="Website" src={Portfolio} />
                                         <div style={{width: "40%"}}>
@@ -48,7 +48,7 @@ class Home extends Component {
                                         </div>
                                     </a>
                                 </div>
-                                <div className="blocks project1" style={{height:"290px"}}>
+                                <div className="blocks project1">
                                     <a href="https://github.com/jessehoffmann/Catalog/tree/master/catalog" target="_blank">
                                         <img className="thumbnails" alt="Catalog" src={Catalog} />
                                         <div style={{width: "40%"}}>
@@ -61,7 +61,7 @@ class Home extends Component {
                                         </div>     
                                     </a>
                                 </div>
-                                <div className="blocks project2" style={{height:"200px"}}>
+                                <div className="blocks project2" >
                                     <a href="https://github.com/jessehoffmann/Movie-Trailer-Website" target="_blank">
                                         <img className="thumbnails" alt="Movie" src={Movie} />
                                         <h4 className="project-titles">Movie Trailer</h4>
@@ -70,7 +70,7 @@ class Home extends Component {
                                         </ div>
                                     </a>
                                 </div>
-                                <div className="blocks project3" style={{height:"200px"}}>
+                                <div className="blocks project3">
                                     <a href="https://github.com/jessehoffmann/Neighborhood-Map" target="_blank">
                                         <img className="thumbnails" alt="Map" src={Map} />
                                         <h4 className="project-titles">Neighborhood Map</h4>

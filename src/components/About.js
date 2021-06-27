@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 
 //Assets
-import Monogram from '../static/img/monogram.png';
-import Profile from '../static/img/profile.jpg';
 import Headshot from '../static/img/headshot.jpg';
 import LinkedIn from '../static/img/linkedin.png';
-import Facebook from '../static/img/facebook.png';
-import Instagram from '../static/img/instagram.png';
-import Realtor from '../static/img/realtor.png';
 import GitHub from '../static/img/github.png';
 
 //Styles

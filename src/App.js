@@ -13,6 +13,7 @@ import {
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import Resume from './components/Resume';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
@@ -35,11 +36,12 @@ class App extends Component {
                     <Route path="/about">
                         <About />
                     </Route>
-                    {
-                        <Route path="/contact">
-                            <Contact />
-                        </Route>
-                    }
+                    <Route path="/contact">
+                        <Contact />
+                    </Route>
+                    <Route path="/resume">
+                        <Resume />
+                    </Route>
                     <Route path="/">
                         <Home />
                     </Route>
