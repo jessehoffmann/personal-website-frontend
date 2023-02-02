@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 //Assets
-import OfficialResume from '../static/Jesse Hoffmann Resume.pdf';
+import OfficialResume from '../static/Jesse Hoffmann Resume.pdf'
 
 //Styles
-import '../static/css/portfolio_style.css';
+import '../static/css/portfolio_style.css'
 
 class About extends Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-        }
+        this.state = {}
+    }
 
-    };
-
-    render() {        
+    render() {
         return (
             <div>
                 <div className="content main">
-                    <embed 
+                    <embed
                         src={OfficialResume}
                         width="100%"
-                        height="1200px" 
+                        height="1200px"
                         type="application/pdf"
                     />
                 </div>
@@ -31,4 +29,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default About

@@ -6,8 +6,8 @@
 
 Кроссбраузерная коллекция css теней
 
-+ Геренатор css файлов box-shadows.min.css
-+ Генератор css теней (box-shadow)
+-   Геренатор css файлов box-shadows.min.css
+-   Генератор css теней (box-shadow)
 
 <p align="center">Пробуйте, экспериментируйте, используйте все как хотите и где хотите!</p>
 
@@ -23,19 +23,19 @@ npm install box-shadows-css --save-dev
 
 ## Содержание
 
-+ [Применение](#Применение)
-  + [Подключение стилей](#1-Подключение-стилей)
-  + [Добавление класса](#2-Добавление-класса)
-  + [Добавление класса с номером](#3-Добавление-класса-с-номером)
-  + [Эффекты при наведении](#4-Эффекты-при-наведении)
-  + [Плавная трансформация](#5-Плавная-трансформация-и-анимация)
-  + [Добавление параметра inset](#6-Добавление-параметра-inset)
-+ [WordPress Functions.php](#wordpress-functionsphp)
-+ [Геренатор css файлов min.css](#Геренатор-css-файлов-box-shadowsmincss)
-+ [Генератор css box-shadow](#Генератор-css-box-shadow)
-+ [Использование](#Использование)
-+ [Лицензия](#Лицензия)
-+ [Сотрудничество](#Сотрудничество)
+-   [Применение](#Применение)
+    -   [Подключение стилей](#1-Подключение-стилей)
+    -   [Добавление класса](#2-Добавление-класса)
+    -   [Добавление класса с номером](#3-Добавление-класса-с-номером)
+    -   [Эффекты при наведении](#4-Эффекты-при-наведении)
+    -   [Плавная трансформация](#5-Плавная-трансформация-и-анимация)
+    -   [Добавление параметра inset](#6-Добавление-параметра-inset)
+-   [WordPress Functions.php](#wordpress-functionsphp)
+-   [Геренатор css файлов min.css](#Геренатор-css-файлов-box-shadowsmincss)
+-   [Генератор css box-shadow](#Генератор-css-box-shadow)
+-   [Использование](#Использование)
+-   [Лицензия](#Лицензия)
+-   [Сотрудничество](#Сотрудничество)
 
 ## Применение
 
@@ -45,9 +45,9 @@ npm install box-shadows-css --save-dev
 
 ```html
 <head>
-  <link rel="stylesheet" href="/box-shadows.css">
-  <!-- or -->
-  <link rel="stylesheet" href="/box-shadows.min.css">
+    <link rel="stylesheet" href="/box-shadows.css" />
+    <!-- or -->
+    <link rel="stylesheet" href="/box-shadows.min.css" />
 </head>
 ```
 
@@ -75,7 +75,7 @@ npm install box-shadows-css --save-dev
 <div class="bShadow-1"></div>
 ```
 
-+ Сейчас коллекция состоит более чем из 50 вариантов теней с номером, а также четырех независимых классов: **.bShadow**, **.bShadow-light**, **.bShadow-inset** и **.bSnone**.
+-   Сейчас коллекция состоит более чем из 50 вариантов теней с номером, а также четырех независимых классов: **.bShadow**, **.bShadow-light**, **.bShadow-inset** и **.bSnone**.
 
 Смотрите [пример][link3]
 
@@ -87,20 +87,20 @@ npm install box-shadows-css --save-dev
 <div class="bShadow-38 bShadow-1h"></div>
 ```
 
-Посмотрите [на примере][link4] класса *.bShadow*. При наведении он присваивает теневые значения класса *.bShadow-1* / пробуйте, экспериментируйте, используйте все что хотите и как хотите.
+Посмотрите [на примере][link4] класса _.bShadow_. При наведении он присваивает теневые значения класса _.bShadow-1_ / пробуйте, экспериментируйте, используйте все что хотите и как хотите.
 
 Если вы хотите, чтобы при наведении или клике тень не появлялась, добавьте класс **.bSnone**
 
 ## 5. Плавная трансформация и анимация
 
-Класс `.bShadow` по умолчанию использует плавную анимацию в .2s `transition: transform 0.2s ease-in-out`, а также включает свойство, которое предупреждает браузер о предстоящей трансформации тени и позиции `will-change: transform, box-shadow;`.  
+Класс `.bShadow` по умолчанию использует плавную анимацию в .2s `transition: transform 0.2s ease-in-out`, а также включает свойство, которое предупреждает браузер о предстоящей трансформации тени и позиции `will-change: transform, box-shadow;`.
 
 Используйте это, чтобы сделать красивую анимацию ваших блоков. Например, вы можете добавить свой класс или свойства с трансформацией:
 
 ```css
 .transform-translateY-5:hover {
-  -webkit-transform: translateY(-5px) translateZ(0);
-  transform: translateY(-5px) translateZ(0);
+    -webkit-transform: translateY(-5px) translateZ(0);
+    transform: translateY(-5px) translateZ(0);
 }
 ```
 
@@ -112,7 +112,7 @@ npm install box-shadows-css --save-dev
 
 И вы увидите [результат][link5]
 
-## 6. Добавление параметра *inset*
+## 6. Добавление параметра _inset_
 
 Чтобы добавить параметр внутренней тени, просто вставьте скрипт на страницу html и укажите в нем классы, для которых вы хотите применить его.
 
@@ -125,13 +125,13 @@ npm install box-shadows-css --save-dev
 });
 ```
 
- [Пример][link6]
+[Пример][link6]
 
 ## WordPress Functions.php
 
 Используйте библиотеку, включив таблицу стилей в файле **functions.php** вашей темы на **WordPress**.
 
-> wp_enqueue_style( 'bshadows-style', '/box-shadows.min.css', array(), '1.0.4'  );
+> wp_enqueue_style( 'bshadows-style', '/box-shadows.min.css', array(), '1.0.4' );
 
 Чтобы обновить версию, измените ее номер на новый, например `1.0.4`.
 
@@ -139,9 +139,9 @@ npm install box-shadows-css --save-dev
 
 На сайте также есть **генератор** файлов [box-shadows.min.css][link10] с инструкцией, который позволяет пользователю создать собственный файл, состоящий только из выбранных классов. Это поможет снизить нагрузку на сайт, если ваш проект использует менее двух или трех теней.
 
-  1. [Перейдите на сайт][link10]
-  2. нажмите кнопку «показать в блоках» и следуйте инструкции
-  3. наконец, нажмите кнопку «загрузить» и подключите скаченный файл к своему сайту
+1. [Перейдите на сайт][link10]
+2. нажмите кнопку «показать в блоках» и следуйте инструкции
+3. наконец, нажмите кнопку «загрузить» и подключите скаченный файл к своему сайту
 
 Готов!
 
@@ -163,20 +163,18 @@ Box-shadows.css.css предоставляется по лицензии [MIT](h
 
 <p align="right"><a href="#Содержание">↑ наверх</a></p>
 
-[link1]: https://github.com/madeas/box-shadows.css/blob/master/box-shadows.css?raw=true "box-shadows.css"
-[link2]: https://github.com/madeas/box-shadows.css/blob/master/box-shadows.min.css?raw=true "box-shadows.min.css"
-[link3]: https://madeas.github.io/box-shadows "all blocks with box-shadow"
-[link4]: https://jsfiddle.net/madeas/c9oydmb3/show/ "hover effect"
-[link5]: https://jsfiddle.net/madeas/c9oydmb3/1/show/ "animation"
-[link6]: https://jsfiddle.net/madeas/c9oydmb3/2/show/ "inset javascript"
-[link7]: #Геренатор-css-файлов-box-shadowsmincss "геренатор min.css"
-[link8]: https://twitter.com/andrejsharapov "twitter"
-[link9]: https://madeas.github.io/box-shadows#generator-css-box-shadow "Generator CSS Box-shadow"
-[link10]: https://madeas.github.io/box-shadows#create-file-min-css "Create the file.min.css"
-
-[readmeru]: https://github.com/madeas/box-shadows.css/blob/master/lang/ru/README.md "Ru"
+[link1]: https://github.com/madeas/box-shadows.css/blob/master/box-shadows.css?raw=true 'box-shadows.css'
+[link2]: https://github.com/madeas/box-shadows.css/blob/master/box-shadows.min.css?raw=true 'box-shadows.min.css'
+[link3]: https://madeas.github.io/box-shadows 'all blocks with box-shadow'
+[link4]: https://jsfiddle.net/madeas/c9oydmb3/show/ 'hover effect'
+[link5]: https://jsfiddle.net/madeas/c9oydmb3/1/show/ 'animation'
+[link6]: https://jsfiddle.net/madeas/c9oydmb3/2/show/ 'inset javascript'
+[link7]: #Геренатор-css-файлов-box-shadowsmincss 'геренатор min.css'
+[link8]: https://twitter.com/andrejsharapov 'twitter'
+[link9]: https://madeas.github.io/box-shadows#generator-css-box-shadow 'Generator CSS Box-shadow'
+[link10]: https://madeas.github.io/box-shadows#create-file-min-css 'Create the file.min.css'
+[readmeru]: https://github.com/madeas/box-shadows.css/blob/master/lang/ru/README.md 'Ru'
 [flagru]: https://madeas.github.io/src/ru.png
-
-[readmeen]: https://github.com/madeas/box-shadows.css/blob/master/README.md "En"
+[readmeen]: https://github.com/madeas/box-shadows.css/blob/master/README.md 'En'
 [flagen]: https://madeas.github.io/src/en.png
 [caniuse]: https://caniuse.com/#search=box-shadow
