@@ -8,7 +8,6 @@ import GitHub from '../static/img/github.png'
 //Styles
 import '../static/css/portfolio_style.css'
 
-import NavBar from './NavBar'
 
 class About extends Component {
     constructor(props) {
@@ -98,7 +97,7 @@ class About extends Component {
                             >
                                 <a
                                     href="https://www.linkedin.com/in/jessehoffmann/"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                 >
                                     <img
                                         src={LinkedIn}
@@ -111,7 +110,7 @@ class About extends Component {
                                 </a>
                                 <a
                                     href="https://github.com/jessehoffmann"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                 >
                                     <img
                                         src={GitHub}

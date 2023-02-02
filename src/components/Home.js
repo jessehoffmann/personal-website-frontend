@@ -5,13 +5,11 @@ import Landscape from '../static/img/daylight.jpg'
 import Catalog from '../static/img/catalog.jpg'
 import Movie from '../static/img/movie.jpg'
 import Map from '../static/img/map.jpg'
-import Website from '../static/img/website.jpg'
 import Portfolio from '../static/img/portfolio.jpg'
 
 //Styles
 import '../static/css/portfolio_style.css'
 
-import NavBar from './NavBar'
 
 class Home extends Component {
     constructor(props) {
@@ -41,7 +39,7 @@ class Home extends Component {
                                 <div className="blocks project4">
                                     <a
                                         href="https://github.com/jessehoffmann/Personal-Website"
-                                        target="_blank"
+                                        target="_blank" rel="noreferrer"
                                     >
                                         <img
                                             className="thumbnails"
@@ -79,7 +77,7 @@ class Home extends Component {
                                 <div className="blocks project1">
                                     <a
                                         href="https://github.com/jessehoffmann/Catalog/tree/master/catalog"
-                                        target="_blank"
+                                        target="_blank" rel="noreferrer"
                                     >
                                         <img
                                             className="thumbnails"
@@ -117,7 +115,7 @@ class Home extends Component {
                                 <div className="blocks project2">
                                     <a
                                         href="https://github.com/jessehoffmann/Movie-Trailer-Website"
-                                        target="_blank"
+                                        target="_blank" rel="noreferrer"
                                     >
                                         <img
                                             className="thumbnails"
@@ -142,7 +140,7 @@ class Home extends Component {
                                 <div className="blocks project3">
                                     <a
                                         href="https://github.com/jessehoffmann/Neighborhood-Map"
-                                        target="_blank"
+                                        target="_blank" rel="noreferrer"
                                     >
                                         <img
                                             className="thumbnails"

@@ -46,7 +46,7 @@ class About extends Component {
                             >
                                 <a
                                     href="https://www.linkedin.com/in/jessehoffmann/"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                 >
                                     <img
                                         src={LinkedIn}
@@ -59,7 +59,7 @@ class About extends Component {
                                 </a>
                                 <a
                                     href="https://github.com/jessehoffmann"
-                                    target="_blank"
+                                    target="_blank" rel="noreferrer"
                                 >
                                     <img
                                         src={GitHub}

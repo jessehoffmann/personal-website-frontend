@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 
-import Landscape from './static/img/daylight.jpg'
 
 //import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './components/Home'
 import About from './components/About'

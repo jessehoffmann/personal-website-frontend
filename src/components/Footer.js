@@ -16,9 +16,9 @@ class Footer extends Component {
         return (
             <div>
                 <footer>
-                    <p class="footer-text">Jesse Thomas Hoffmann</p>
+                    <p className="footer-text">Jesse Thomas Hoffmann</p>
                     <br />
-                    <p class="footer-text-three">Software Developer</p>
+                    <p className="footer-text-three">Software Developer</p>
                 </footer>
             </div>
         )
