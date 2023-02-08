@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom'
 //Assets
 import Monogram from '../static/img/monogram.png'
 
-//Styles
-import '../static/css/portfolio_style.css'
-
 class NavBar extends Component {
     constructor(props) {
         super(props)
