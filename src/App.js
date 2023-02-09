@@ -7,11 +7,11 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Resume from './components/Resume'
-import NavBar from './components/NavBar'
+import Header from './components/Header'
 import Footer from './components/Footer'
 
 //Styles
-import './static/css/portfolio_style.css'
+import './static/css/styles.css'
 
 class App extends Component {
     render() {
@@ -21,7 +21,7 @@ class App extends Component {
             <div style={{backgroundImage: `url(${Landscape})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
             */}
                 <div>
-                    <NavBar />
+                    <Header />
 
                     {/* A <Switch> looks through its children <Route>s and
                     renders the first one that matches the current URL. */}
