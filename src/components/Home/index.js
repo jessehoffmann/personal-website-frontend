@@ -23,11 +23,10 @@ const projectsList = [
         image: Portfolio,
         title: 'Portfolio',
         description:
-            "The website you're looking at right now! This S3 bucket based website was built with React and utilizes",
+            "The website you're looking at right now! This React based website is deployed with AWS Amplify and utilizes",
         details: [
-            '• AWS Cloudfront for securing connections',
-            '• AWS Codepipline for automatic deployment',
             '• React Router for page routing',
+            '• Custom CSS for all designs including mobile responsiveness',
             '• Formspree API for secure emails through contact page',
         ],
     },
@@ -45,14 +44,14 @@ const projectsList = [
         ],
     },
     {
-        link: 'https://github.com/jessehoffmann/Neighborhood-Map',
+        link: 'https://github.com/jessehoffmann/Movie-Trailer-Website',
         image: Movie,
         title: 'Movie Trailers',
         description:
             "Simple full stack application that uses Python's object-oriented style programming and simple HTML/CSS to display trailers of my favorite movies.",
     },
     {
-        link: 'https://github.com/jessehoffmann/Movie-Trailer-Website',
+        link: 'https://github.com/jessehoffmann/Neighborhood-Map',
         image: Map,
         title: 'Map',
         description:

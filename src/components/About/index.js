@@ -2,9 +2,7 @@ import React from 'react'
 
 //Assets
 import Headshot from '../../static/img/headshot.jpg'
-import LinkedIn from '../../static/img/linkedin.png'
-import GitHub from '../../static/img/github.png'
-import { HeadshotImage, LinkIcon, LinksContainer } from './styled'
+import { HeadshotImage } from './styled'
 import { PageTitle } from '../styled'
 import SocialMediaLinks from '../SocialMediaLinks'
 
