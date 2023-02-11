@@ -10,6 +10,7 @@ export const FeaturedWorkContainer = styled.div`
 
 export const ProjectLinkFlexContainer = styled.a`
     display: flex;
+    max-height: 300px;
 `
 
 export const ProjectDescriptionFlexItem = styled.div`
@@ -44,8 +45,8 @@ export const ProjectTitle = styled.h4`
     margin: 0;
     text-align: center;
 
-    @media (min-width: 500px) {
-        font-size: 12px;
+    @media (max-width: 500px) {
+        font-size: 14px;
     }
 `
 
