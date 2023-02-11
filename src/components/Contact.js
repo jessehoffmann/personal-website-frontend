@@ -5,18 +5,18 @@ import LinkedIn from '../static/img/linkedin.png'
 import GitHub from '../static/img/github.png'
 
 import MyForm from './MyForm'
+import { PageTitle } from './styled'
 
 const Contact = () => {
     return (
         <div>
             <div className="content main">
                 <div className="blocks about">
-                    <h3
-                        className="featured-work-title"
+                    <PageTitle
                         style={{ padding: '30px', paddingBottom: '0px' }}
                     >
                         Contact Me
-                    </h3>
+                    </PageTitle>
                     <div
                         style={{
                             margin: '40px',
