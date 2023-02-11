@@ -3,10 +3,25 @@ import { Link } from 'react-router-dom'
 
 //Assets
 import Monogram from '../../static/img/monogram.png'
+import MobileMenu from './MobileMenu'
 import { MonogramImage } from './styled'
 
 const Header = () => {
     const [scrolling, setScrolling] = useState(false)
+    const [windowDimension, setWindowDimension] = useState(null)
+
+    useEffect(() => {
+        setWindowDimension(window.innerWidth)
+    }, [])
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimension(window.innerWidth)
+        }
+
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
@@ -18,6 +33,8 @@ const Header = () => {
         setScrolling(offset > 0)
     }
 
+    const isMobile = windowDimension <= 640
+
     return (
         <div>
             <header className={scrolling ? 'sticky' : null}>
@@ -27,12 +44,18 @@ const Header = () => {
                     </Link>
                     <h1 className="header-title">Jesse Thomas Hoffmann</h1>
 
-                    <h3 className="header-links">
-                        <Link to="/about">About</Link>
-                    </h3>
-                    <h3 className="header-links">
-                        <Link to="/contact">Contact</Link>
-                    </h3>
+                    {isMobile ? (
+                        <MobileMenu />
+                    ) : (
+                        <>
+                            <h3 className="header-links">
+                                <Link to="/about">About</Link>
+                            </h3>
+                            <h3 className="header-links">
+                                <Link to="/contact">Contact</Link>
+                            </h3>
+                        </>
+                    )}
                 </div>
             </header>
         </div>

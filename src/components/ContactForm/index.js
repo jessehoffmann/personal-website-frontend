@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Form = () => {
+const ContactForm = () => {
     const [status, setStatus] = useState('')
 
     const submitForm = (ev) => {
@@ -72,4 +72,4 @@ const Form = () => {
     )
 }
 
-export default Form
+export default ContactForm

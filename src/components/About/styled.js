@@ -10,15 +10,3 @@ export const HeadshotImage = styled.img`
     object-fit: cover;
     border-radius: 15px;
 `
-
-export const LinksContainer = styled.div`
-    width: 225px;
-    margin: auto;
-    margin-top: 30px;
-`
-
-export const LinkIcon = styled.img`
-    width: 50px;
-    height: 50px;
-    margin: 20px;
-`

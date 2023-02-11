@@ -6,6 +6,7 @@ import LinkedIn from '../../static/img/linkedin.png'
 import GitHub from '../../static/img/github.png'
 import { HeadshotImage, LinkIcon, LinksContainer } from './styled'
 import { PageTitle } from '../styled'
+import SocialMediaLinks from '../SocialMediaLinks'
 
 const bioParagraphs = [
     "For as long as I can remember I have been fascinated by technology and it's real world applications. This fascination is what originally sparked my interest in computer programming. Like most people though, I always felt a bit intimidated by the idea of programming growing up. It wasn't until I was a young adult that I found the courage to actually tackle it head on. I first learned to code at a bootcamp and then moved on to an online program, which ultimately led to me to my first internship. Since then I have been absolutely loving the experience of working as a software engineer!",
@@ -36,22 +37,7 @@ const About = () => {
                                 <p key={index}>{paragraph}</p>
                             ))}
                         </div>
-                        <LinksContainer>
-                            <a
-                                href="https://www.linkedin.com/in/jessehoffmann/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <LinkIcon src={LinkedIn} />
-                            </a>
-                            <a
-                                href="https://github.com/jessehoffmann"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <LinkIcon src={GitHub} />
-                            </a>
-                        </LinksContainer>
+                        <SocialMediaLinks />
                     </div>
                 </div>
             </div>

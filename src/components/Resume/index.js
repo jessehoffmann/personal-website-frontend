@@ -1,7 +1,7 @@
 import React from 'react'
 
 //Assets
-import OfficialResume from '../static/Jesse Hoffmann Resume.pdf'
+import OfficialResume from '../../static/Jesse Hoffmann Resume.pdf'
 
 const Resume = () => {
     return (
