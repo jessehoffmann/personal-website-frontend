@@ -1,20 +1,19 @@
 import React from 'react'
-
-//Assets
 import OfficialResume from '../../static/Jesse Hoffmann Resume.pdf'
+import { PageContainer } from '../styled'
 
 const Resume = () => {
     return (
-        <div>
-            <div className="content main">
+        <main>
+            <PageContainer>
                 <embed
                     src={OfficialResume}
-                    width="100%"
-                    height="1200px"
-                    type="application/pdf"
+                    width='100%'
+                    height='1200px'
+                    type='application/pdf'
                 />
-            </div>
-        </div>
+            </PageContainer>
+        </main>
     )
 }
 

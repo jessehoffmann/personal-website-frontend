@@ -9,16 +9,16 @@ const SocialMediaLinks = () => {
     return (
         <LinksContainer>
             <a
-                href="https://www.linkedin.com/in/jessehoffmann/"
-                target="_blank"
-                rel="noreferrer"
+                href='https://www.linkedin.com/in/jessehoffmann/'
+                target='_blank'
+                rel='noreferrer'
             >
                 <LinkIcon src={LinkedIn} />
             </a>
             <a
-                href="https://github.com/jessehoffmann"
-                target="_blank"
-                rel="noreferrer"
+                href='https://github.com/jessehoffmann'
+                target='_blank'
+                rel='noreferrer'
             >
                 <LinkIcon src={GitHub} />
             </a>

@@ -1,5 +1,17 @@
 import styled from 'styled-components'
 
+export const StickyHeader = styled.header`
+    padding: 15px;
+    ${(props) =>
+        props.scrolling &&
+        `
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+    `}
+`
+
 export const MonogramImage = styled.img`
     height: 50px;
     width: 50px;
@@ -7,7 +19,7 @@ export const MonogramImage = styled.img`
     margin-top: 4px;
     object-fit: contain;
 
-    @media (max-width: 500px) {
+    @media (max-width: 1000px) {
         margin-left: 0px;
     }
 `

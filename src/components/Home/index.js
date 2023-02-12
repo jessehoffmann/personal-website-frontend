@@ -9,6 +9,8 @@ import Portfolio from '../../static/img/portfolio.jpg'
 import {
     FeaturedWorkContainer,
     MainCoverImage,
+    ProjectDescription,
+    ProjectDescriptionBulletPoints,
     ProjectDescriptionFlexItem,
     ProjectImage,
     ProjectImageFlexItem,
@@ -61,53 +63,43 @@ const projectsList = [
 
 const Home = () => {
     return (
-        <div>
-            <div className="content" style={{ backgroundColor: 'inherit' }}>
-                <MainCoverImage src={Landscape} />
-                <FeaturedWorkContainer>
-                    <PageTitle>My Featured Coding Projects</PageTitle>
-                    <div className="flex-container">
-                        {projectsList.map((project, index) => (
-                            <div
-                                className={`blocks project${index}`}
-                                key={index}
+        <main>
+            <MainCoverImage src={Landscape} />
+            <FeaturedWorkContainer>
+                <PageTitle>My Featured Coding Projects</PageTitle>
+                <div className='flex-container'>
+                    {projectsList.map((project, index) => (
+                        <div className={`blocks project${index}`} key={index}>
+                            <ProjectLinkFlexContainer
+                                href={project.link}
+                                target='_blank'
+                                rel='noreferrer'
                             >
-                                <ProjectLinkFlexContainer
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <ProjectDescriptionFlexItem>
-                                        <ProjectTitle>
-                                            {project.title}
-                                        </ProjectTitle>
-                                        <p className="project-description">
-                                            {project.description}
-                                        </p>
-                                        {project.details?.map(
-                                            (detail, index) => (
-                                                <p
-                                                    className="project-description-bulletpoints"
-                                                    key={index}
-                                                >
-                                                    {detail}
-                                                </p>
-                                            )
-                                        )}
-                                    </ProjectDescriptionFlexItem>
-                                    <ProjectImageFlexItem>
-                                        <ProjectImage
-                                            alt={project.title}
-                                            src={project.image}
-                                        />
-                                    </ProjectImageFlexItem>
-                                </ProjectLinkFlexContainer>
-                            </div>
-                        ))}
-                    </div>
-                </FeaturedWorkContainer>
-            </div>
-        </div>
+                                <ProjectDescriptionFlexItem>
+                                    <ProjectTitle>{project.title}</ProjectTitle>
+                                    <ProjectDescription>
+                                        {project.description}
+                                    </ProjectDescription>
+                                    {project.details?.map((detail, index) => (
+                                        <ProjectDescriptionBulletPoints
+                                            key={index}
+                                        >
+                                            {detail}
+                                        </ProjectDescriptionBulletPoints>
+                                    ))}
+                                </ProjectDescriptionFlexItem>
+                                <ProjectImageFlexItem>
+                                    <ProjectImage
+                                        alt={project.title}
+                                        src={project.image}
+                                    />
+                                </ProjectImageFlexItem>
+                            </ProjectLinkFlexContainer>
+                        </div>
+                    ))}
+                </div>
+            </FeaturedWorkContainer>
+        </main>
     )
 }
 

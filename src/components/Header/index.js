@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 //Assets
 import Monogram from '../../static/img/monogram.png'
 import MobileMenu from './MobileMenu'
-import { MonogramImage } from './styled'
+import { MonogramImage, StickyHeader } from './styled'
 
 const Header = () => {
     const [scrolling, setScrolling] = useState(false)
@@ -37,27 +37,27 @@ const Header = () => {
 
     return (
         <div>
-            <header className={scrolling ? 'sticky' : null}>
-                <div className="center-header">
-                    <Link to="/">
+            <StickyHeader scrolling={scrolling}>
+                <div className='center-header'>
+                    <Link to='/'>
                         <MonogramImage src={Monogram} />
                     </Link>
-                    <h1 className="header-title">Jesse Thomas Hoffmann</h1>
+                    <h1 className='header-title'>Jesse Thomas Hoffmann</h1>
 
                     {isMobile ? (
                         <MobileMenu />
                     ) : (
                         <>
-                            <h3 className="header-links">
-                                <Link to="/about">About</Link>
+                            <h3 className='header-links'>
+                                <Link to='/about'>About</Link>
                             </h3>
-                            <h3 className="header-links">
-                                <Link to="/contact">Contact</Link>
+                            <h3 className='header-links'>
+                                <Link to='/contact'>Contact</Link>
                             </h3>
                         </>
                     )}
                 </div>
-            </header>
+            </StickyHeader>
         </div>
     )
 }

@@ -38,12 +38,12 @@ const MobileMenu = () => {
             </MenuButton>
             <MenuList visible={openMenu}>
                 <MenuListItem>
-                    <Link to="/about" onClick={handleClick}>
+                    <Link to='/about' onClick={handleClick}>
                         About
                     </Link>
                 </MenuListItem>
                 <MenuListItem>
-                    <Link to="/contact" onClick={handleClick}>
+                    <Link to='/contact' onClick={handleClick}>
                         Contact
                     </Link>
                 </MenuListItem>

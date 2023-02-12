@@ -10,7 +10,11 @@ export const FeaturedWorkContainer = styled.div`
 
 export const ProjectLinkFlexContainer = styled.a`
     display: flex;
-    max-height: 300px;
+    max-height: 320px;
+
+    @media (max-width: 750px) {
+        max-height: 400px;
+    }
 `
 
 export const ProjectDescriptionFlexItem = styled.div`
@@ -48,6 +52,18 @@ export const ProjectTitle = styled.h4`
     @media (max-width: 500px) {
         font-size: 14px;
     }
+`
+
+export const ProjectDescription = styled.p`
+    color: black;
+    text-indent: 25px;
+    margin-bottom: 0px;
+`
+
+export const ProjectDescriptionBulletPoints = styled.p`
+    margin: 0px;
+    margin-left: 11px;
+    text-indent: -11px;
 `
 
 export const MainCoverImage = styled.img`

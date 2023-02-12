@@ -24,42 +24,42 @@ const ContactForm = () => {
     return (
         <form
             onSubmit={submitForm}
-            action="https://formspree.io/mzbavqpp"
-            method="POST"
-            className="contact-form"
+            action='https://formspree.io/mzbavqpp'
+            method='POST'
+            className='contact-form'
         >
             <br />
             <input
                 disabled={status === 'SUCCESS'}
-                className="input-field"
+                className='input-field'
                 style={status === 'SUCCESS' ? { opacity: 0.5 } : null}
-                type="name"
-                name="name"
-                placeholder="Name"
+                type='name'
+                name='name'
+                placeholder='Name'
             />
             <br />
             <input
                 disabled={status === 'SUCCESS'}
-                className="input-field"
+                className='input-field'
                 style={status === 'SUCCESS' ? { opacity: 0.5 } : null}
-                type="email"
-                name="email"
-                placeholder="Email"
+                type='email'
+                name='email'
+                placeholder='Email'
             />
             <br />
             <textarea
                 disabled={status === 'SUCCESS'}
-                className="input-field message"
+                className='input-field message'
                 style={status === 'SUCCESS' ? { opacity: 0.5 } : null}
-                type="text"
-                name="message"
-                placeholder="Message"
+                type='text'
+                name='message'
+                placeholder='Message'
             />
             <br />
             {status === 'SUCCESS' ? (
                 <p style={{ textAlign: 'center' }}>Thanks!</p>
             ) : (
-                <button disabled={status === 'SUCCESS'} className="submit">
+                <button disabled={status === 'SUCCESS'} className='submit'>
                     Submit
                 </button>
             )}

@@ -9,4 +9,11 @@ export const HeadshotImage = styled.img`
     margin-bottom: 30px;
     object-fit: cover;
     border-radius: 15px;
+
+    @media (max-width: 640px) {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        object-fit: contain;
+    }
 `
