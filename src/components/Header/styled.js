@@ -32,6 +32,7 @@ export const MenuList = styled.ul`
     padding: 10px;
     background-color: white;
     box-shadow: 0px 8px 16px 0px;
+    border-radius: 10px;
 `
 
 export const MenuListItem = styled.li`
@@ -41,8 +42,7 @@ export const MenuListItem = styled.li`
 export const MenuButton = styled.button`
     background-color: white;
     padding: 5px !important;
-    border: 0.5px solid black;
-    border-radius: 5px;
+    border: 0px;
     font-size: 0;
 `
 

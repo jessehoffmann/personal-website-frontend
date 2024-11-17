@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MenuButton, MenuImage, MenuList, MenuListItem } from './styled'
-import MenuIcon from '../../static/img/menu.png'
+import MenuIcon from '../../static/img/menu.svg'
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 

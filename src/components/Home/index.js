@@ -1,12 +1,9 @@
 import React from 'react'
 
 //Assets
-import Landscape from '../../static/img/daylight.jpg'
-import LandscapeBlur from '../../static/img/daylight-blur.jpg'
-import Catalog from '../../static/img/catalog.jpg'
-import Movie from '../../static/img/movie.jpg'
-import Map from '../../static/img/map.jpg'
-import Portfolio from '../../static/img/portfolio.jpg'
+import Landscape from '../../static/img/landscape.jpg'
+import LandscapeSmall from '../../static/img/landscape-small.jpg'
+
 import {
     FeaturedWorkContainer,
     MainCoverImage,
@@ -19,53 +16,12 @@ import {
     ProjectTitle,
 } from './styled'
 import { PageTitle } from '../styled'
-
-const projectsList = [
-    {
-        link: 'https://github.com/jessehoffmann/Personal-Website',
-        image: Portfolio,
-        title: 'Portfolio',
-        description:
-            "The website you're looking at right now! This React based website is deployed with AWS Amplify and utilizes",
-        details: [
-            '• React Router for page routing',
-            '• Custom CSS for all designs including mobile responsiveness',
-            '• Formspree API for secure emails through contact page',
-        ],
-    },
-    {
-        link: 'https://github.com/jessehoffmann/Catalog/tree/master/catalog',
-        image: Catalog,
-        title: 'Catalog',
-        description:
-            'This application was designed for catalog-style record keeping. Features include:',
-        details: [
-            '• Runs on vagrant for creating virtual development environment',
-            '• Built with Python Flask framework',
-            '• Uses SQLAlchemy for object-relational mapping',
-            '• Ensures secure user authorization with OAutho 2.0',
-        ],
-    },
-    {
-        link: 'https://github.com/jessehoffmann/Movie-Trailer-Website',
-        image: Movie,
-        title: 'Movie Trailers',
-        description:
-            "Simple full stack application that uses Python's object-oriented style programming and simple HTML/CSS to display trailers of my favorite movies.",
-    },
-    {
-        link: 'https://github.com/jessehoffmann/Neighborhood-Map',
-        image: Map,
-        title: 'Map',
-        description:
-            'Javascript application that utilizes Knockout.js features of date-binding and automatic UI refresh. It also takes advantages of Ajax (jQuery) for API requests.',
-    },
-]
+import { projectsList } from './data'
 
 const Home = () => {
     return (
         <main>
-            <MainCoverImage alt="main-image" preview={LandscapeBlur} image={Landscape} />
+            <MainCoverImage alt="main-image" preview={LandscapeSmall} src={Landscape} />
             <FeaturedWorkContainer>
                 <PageTitle>My Featured Coding Projects</PageTitle>
                 <div className='flex-container'>
@@ -92,6 +48,7 @@ const Home = () => {
                                 <ProjectImageFlexItem>
                                     <ProjectImage
                                         alt={project.title}
+                                        preview={project.preview}
                                         src={project.image}
                                         loading="lazy"
                                     />

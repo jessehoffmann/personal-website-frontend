@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 const LazyLoadImage = ({
     preview,
-    image,
+    src,
     alt,
     bgColor = 'transparent',
     className
@@ -21,7 +21,7 @@ const LazyLoadImage = ({
     }
 
     useEffect(() => {
-        fetchImage(image)
+        fetchImage(src)
     }, [])
 
     return (

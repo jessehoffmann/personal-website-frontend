@@ -35,7 +35,7 @@ export const ProjectImageFlexItem = styled.div`
     }
 `
 
-export const ProjectImage = styled.img`
+export const ProjectImage = styled(LazyLoadImage)`
     width: 100%;
     height: 100%;
     vertical-align: top;
