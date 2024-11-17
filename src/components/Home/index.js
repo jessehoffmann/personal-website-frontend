@@ -2,6 +2,7 @@ import React from 'react'
 
 //Assets
 import Landscape from '../../static/img/daylight.jpg'
+import LandscapeBlur from '../../static/img/daylight-blur.jpg'
 import Catalog from '../../static/img/catalog.jpg'
 import Movie from '../../static/img/movie.jpg'
 import Map from '../../static/img/map.jpg'
@@ -64,7 +65,7 @@ const projectsList = [
 const Home = () => {
     return (
         <main>
-            <MainCoverImage src={Landscape} />
+            <MainCoverImage alt="main-image" preview={LandscapeBlur} image={Landscape} />
             <FeaturedWorkContainer>
                 <PageTitle>My Featured Coding Projects</PageTitle>
                 <div className='flex-container'>
@@ -92,6 +93,7 @@ const Home = () => {
                                     <ProjectImage
                                         alt={project.title}
                                         src={project.image}
+                                        loading="lazy"
                                     />
                                 </ProjectImageFlexItem>
                             </ProjectLinkFlexContainer>

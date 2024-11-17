@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import LazyLoadImage from '../common/LazyLoadImage'
 
 export const FeaturedWorkContainer = styled.div`
     display: inline-block;
@@ -66,7 +67,7 @@ export const ProjectDescriptionBulletPoints = styled.p`
     text-indent: -11px;
 `
 
-export const MainCoverImage = styled.img`
+export const MainCoverImage = styled(LazyLoadImage)`
     padding-top: 0px;
     padding-bottom: 0px;
     width: 100%;

@@ -33,7 +33,7 @@ const Header = () => {
         setScrolling(offset > 0)
     }
 
-    const isMobile = windowDimension <= 640
+    const isMobile = windowDimension && windowDimension <= 640
 
     return (
         <div>
