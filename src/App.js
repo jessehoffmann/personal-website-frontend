@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 //import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import Home from './components/Home'
 import About from './components/About'
@@ -25,20 +25,12 @@ class App extends Component {
 
                     {/* A <Switch> looks through its children <Route>s and
                     renders the first one that matches the current URL. */}
-                    <Switch>
-                        <Route path='/about'>
-                            <About />
-                        </Route>
-                        <Route path='/contact'>
-                            <Contact />
-                        </Route>
-                        <Route path='/resume'>
-                            <Resume />
-                        </Route>
-                        <Route path='/'>
-                            <Home />
-                        </Route>
-                    </Switch>
+                    <Routes>
+                        <Route path='/about' element={<About />} />
+                        <Route path='/contact' element={<Contact />} />
+                        <Route path='/resume' element={<Resume />} />
+                        <Route path='/' element={<Home />} />
+                    </Routes>
 
                     <Footer />
                 </div>
