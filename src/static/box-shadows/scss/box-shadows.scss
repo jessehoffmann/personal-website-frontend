@@ -20,7 +20,9 @@
             0 2px 9px 0 rgba(62, 57, 107, 0.06)
         )
     );
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition:
+        transform 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
     will-change: transform, box-shadow;
 
     &-light {

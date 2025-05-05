@@ -34,7 +34,7 @@ class App extends Component {
                         <Route path='/contact' element={<Contact />} />
                         {/* <Route path='/resume' element={<Resume />} /> */}
                         <Route path='/' element={<Home />} />
-                        {/* <Route path='/̣skills' element={<Skills />} /> */}
+                        <Route path='/skills' element={<Skills />} />
                     </Routes>
 
                     <Footer />

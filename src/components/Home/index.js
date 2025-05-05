@@ -21,7 +21,11 @@ import { projectsList } from './data'
 const Home = () => {
     return (
         <main>
-            <MainCoverImage alt="main-image" preview={LandscapeSmall} src={Landscape} />
+            <MainCoverImage
+                alt='main-image'
+                preview={LandscapeSmall}
+                src={Landscape}
+            />
             <FeaturedWorkContainer>
                 <PageTitle>My Featured Coding Projects</PageTitle>
                 <div className='flex-container'>
@@ -50,7 +54,7 @@ const Home = () => {
                                         alt={project.title}
                                         preview={project.preview}
                                         src={project.image}
-                                        loading="lazy"
+                                        loading='lazy'
                                     />
                                 </ProjectImageFlexItem>
                             </ProjectLinkFlexContainer>

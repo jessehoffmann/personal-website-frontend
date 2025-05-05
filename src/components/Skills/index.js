@@ -4,6 +4,14 @@ import SkillList from './SkillList'
 import CategoryTabs from './CateogoryTabs'
 import { PageContainer, PageTitle } from '../styled'
 
+export const categoryColors = {
+    Languages: '#1976d2',
+    Frameworks: '#388e3c',
+    Tools: '#f57c00',
+    Testing: '#7b1fa2',
+    Cloud: '#ff2400',
+}
+
 export default function Home() {
     const [selectedCategory, setSelectedCategory] = useState('All')
 
@@ -12,7 +20,6 @@ export default function Home() {
             <PageContainer>
                 <div className='blocks about'>
                     <PageTitle>Software Development Skills</PageTitle>
-                    <br />
                     <SkillChart />
                     <CategoryTabs
                         selected={selectedCategory}

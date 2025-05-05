@@ -6,8 +6,8 @@
 
 A cross-browser collection of CSS box-shadow
 
--   Generator the file box-shadows.min.css
--   Box-shadow CSS Generator
+- Generator the file box-shadows.min.css
+- Box-shadow CSS Generator
 
 <p align="center">Try, experiment, use whatever you want and how you want!</p>
 
@@ -23,19 +23,19 @@ npm install box-shadows-css --save-dev
 
 ## Content
 
--   [Basic Usage](#basic-usage)
-    -   [Include the stylesheet](#1-include-the-stylesheet)
-    -   [Add the class](#2-add-the-class)
-    -   [Add the class number](#3-add-the-class-number)
-    -   [Hover effect](#4-hover-effect)
-    -   [Animation on CSS Transform](#5-animation-on-css-transform)
-    -   [Adding the inset parameter](#6-adding-the-inset-parameter)
--   [WordPress Functions.php](#wordpress-functionsphp)
--   [Generator the file box-shadows.min.css](#generator-the-file-box-shadowsmincss)
--   [Box-shadow CSS Generator](#box-shadow-css-generator)
--   [Usage](#usage)
--   [License](#license)
--   [Contributing](#contributing)
+- [Basic Usage](#basic-usage)
+    - [Include the stylesheet](#1-include-the-stylesheet)
+    - [Add the class](#2-add-the-class)
+    - [Add the class number](#3-add-the-class-number)
+    - [Hover effect](#4-hover-effect)
+    - [Animation on CSS Transform](#5-animation-on-css-transform)
+    - [Adding the inset parameter](#6-adding-the-inset-parameter)
+- [WordPress Functions.php](#wordpress-functionsphp)
+- [Generator the file box-shadows.min.css](#generator-the-file-box-shadowsmincss)
+- [Box-shadow CSS Generator](#box-shadow-css-generator)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
 
 ## Basic Usage
 
@@ -75,7 +75,7 @@ Finally you need to add an additional class to the existing `.bShadow-` with the
 <div class="bShadow-1"></div>
 ```
 
--   Now the collection consists of 53 variants of shadows with the number, as well as four independent classes: **.bShadow**, **.bShadow-light**, **.bShadow-inset** and **.bSnone**.
+- Now the collection consists of 53 variants of shadows with the number, as well as four independent classes: **.bShadow**, **.bShadow-light**, **.bShadow-inset** and **.bSnone**.
 
 See [example][link3]
 

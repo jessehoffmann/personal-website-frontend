@@ -19,6 +19,5 @@ export const skills = [
     { name: 'Cucumber', level: 8, category: 'Testing' },
     { name: 'AWS Lambda', level: 8, category: 'Cloud' },
     { name: 'AWS SQS/SNS', level: 9, category: 'Cloud' },
-    { name: 'PostgreSQL', level: 6, category: 'Cloud' }
-  ];
-  
+    { name: 'PostgreSQL', level: 6, category: 'Cloud' },
+]
