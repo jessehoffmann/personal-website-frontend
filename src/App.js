@@ -3,10 +3,14 @@ import React, { Component } from 'react'
 //import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+// pages
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Resume from './components/Resume'
+import Skills from './components/Skills'
+
+// components
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -28,8 +32,9 @@ class App extends Component {
                     <Routes>
                         <Route path='/about' element={<About />} />
                         <Route path='/contact' element={<Contact />} />
-                        <Route path='/resume' element={<Resume />} />
+                        {/* <Route path='/resume' element={<Resume />} /> */}
                         <Route path='/' element={<Home />} />
+                        {/* <Route path='/̣skills' element={<Skills />} /> */}
                     </Routes>
 
                     <Footer />
