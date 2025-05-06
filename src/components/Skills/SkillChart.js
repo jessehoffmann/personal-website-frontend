@@ -38,6 +38,11 @@ export default function SkillChart() {
             ]}
             height={500}
             margin={{ right: 50 }}
+            sx={{
+                '& svg': {
+                    touchAction: 'auto',
+                },
+            }}
         />
     )
 }

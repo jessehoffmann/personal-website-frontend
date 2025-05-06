@@ -23,7 +23,7 @@ export const projectsList = [
         ],
     },
     {
-        link: 'https://github.com/jessehoffmann/Catalog/tree/master/catalog',
+        link: 'https://github.com/jessehoffmann/Catalog',
         image: Catalog,
         preview: CatalogSmall,
         title: 'Catalog',
