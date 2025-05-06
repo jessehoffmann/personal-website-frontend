@@ -1,7 +1,7 @@
 import React from 'react'
 import { skills } from './data'
 import SkillCard from './SkillCard'
-import { Box, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import PropTypes from 'prop-types'
 
 function SkillList({ category }) {
