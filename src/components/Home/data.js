@@ -14,9 +14,10 @@ export const projectsList = [
         preview: PortfolioSmall,
         title: 'Portfolio',
         description:
-            "The website you're looking at right now! This React based website is deployed with AWS Amplify and utilizes",
+            "The website you're looking at right now! This React based website is deployed with AWS Amplify and utilizes the following:",
         details: [
             '• React Router for page routing',
+            '• MUI X Charts (built on D3) for visualizing tech skills',
             '• Custom CSS for all designs including mobile responsiveness',
             '• Formspree API for secure emails through contact page',
         ],

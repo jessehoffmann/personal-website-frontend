@@ -6,6 +6,7 @@ export const StickyHeader = styled.header`
         props.scrolling &&
         `
         position: fixed;
+        z-index: 1000 !important;
         top: 0px;
         left: 0px;
         width: 100%;

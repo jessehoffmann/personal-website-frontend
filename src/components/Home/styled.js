@@ -58,7 +58,6 @@ export const ProjectTitle = styled.h4`
 export const ProjectDescription = styled.p`
     color: black;
     text-indent: 25px;
-    margin-bottom: 0px;
 `
 
 export const ProjectDescriptionBulletPoints = styled.p`

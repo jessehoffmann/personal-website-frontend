@@ -43,6 +43,11 @@ const MobileMenu = () => {
                     </Link>
                 </MenuListItem>
                 <MenuListItem>
+                    <Link to='/skills' onClick={handleClick}>
+                        Skills
+                    </Link>
+                </MenuListItem>
+                <MenuListItem>
                     <Link to='/contact' onClick={handleClick}>
                         Contact
                     </Link>

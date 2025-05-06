@@ -12,7 +12,7 @@ import { convertHexToRGBA } from '../../helpers/hexToRgba'
 
 function SkillCard({ name, level, category }) {
     return (
-        <Grid size={3}>
+        <Grid size={{ xs: 6, md: 3 }}>
             <Card>
                 <CardContent>
                     <Typography variant='h6'>{name}</Typography>

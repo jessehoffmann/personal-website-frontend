@@ -1,19 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 // pages
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
+import Home from './components/Home'
+import About from './components/About'
+import Contact from './components/Contact'
 // import Resume from './components/Resume';
-import Skills from './components/Skills';
+import Skills from './components/Skills'
 
 // components
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 //Styles
-import './static/css/styles.css';
+import './static/css/styles.css'
 
 const App: React.FC = () => {
     return (
@@ -30,7 +30,7 @@ const App: React.FC = () => {
                 <Footer />
             </div>
         </Router>
-    );
-};
+    )
+}
 
-export default App; 
+export default App
