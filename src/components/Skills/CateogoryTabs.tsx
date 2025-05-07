@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Tabs, Tab, Box } from '@mui/material'
+import { SkillCategories } from './data'
 
 const categories = [
     'All',
@@ -11,8 +12,14 @@ const categories = [
     'Cloud',
 ]
 
-function CategoryTabs({ selected, onChange }) {
-    const handleChange = (_, newValue) => {
+function CategoryTabs({
+    selected,
+    onChange,
+}: {
+    selected: SkillCategories | 'All'
+    onChange: (value: SkillCategories | 'All') => void
+}) {
+    const handleChange = (_: unknown, newValue: SkillCategories | 'All') => {
         onChange(newValue)
     }
 

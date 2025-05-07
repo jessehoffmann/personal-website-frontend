@@ -1,10 +1,9 @@
 import React from 'react'
-import { skills } from './data'
+import { SkillCategories, skills } from './data'
 import SkillCard from './SkillCard'
 import { Grid } from '@mui/material'
-import PropTypes from 'prop-types'
 
-function SkillList({ category }) {
+function SkillList({ category }: { category?: SkillCategories }) {
     const filtered = category
         ? skills.filter((skill) => skill.category === category)
         : skills
@@ -16,10 +15,6 @@ function SkillList({ category }) {
             ))}
         </Grid>
     )
-}
-
-SkillList.propTypes = {
-    category: PropTypes.string,
 }
 
 export default SkillList

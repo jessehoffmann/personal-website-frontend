@@ -6,11 +6,11 @@ import {
     LinearProgress,
     Grid,
 } from '@mui/material'
-import PropTypes from 'prop-types'
 import { categoryColors } from '.'
 import { convertHexToRGBA } from '../../helpers/hexToRgba'
+import { SkillProps } from './data'
 
-function SkillCard({ name, level, category }) {
+const SkillCard: React.FC<SkillProps> = ({ name, level, category }) => {
     return (
         <Grid size={{ xs: 6, md: 3 }}>
             <Card>
@@ -37,12 +37,6 @@ function SkillCard({ name, level, category }) {
             </Card>
         </Grid>
     )
-}
-
-SkillCard.propTypes = {
-    name: PropTypes.string,
-    level: PropTypes.number,
-    category: PropTypes.string,
 }
 
 export default SkillCard

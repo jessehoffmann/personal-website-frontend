@@ -5,23 +5,36 @@ import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 
 const MobileMenu = () => {
-    const containerRef = useRef(null)
+    const containerRef = useRef<HTMLDivElement>(null)
     const [openMenu, setMenuOpen] = useState(false)
 
     useEffect(() => {
-        window.addEventListener('mousedown', handleMouseDown)
-        window.addEventListener('scroll', handleMouseDown)
+        window.addEventListener(
+            'mousedown',
+            handleMouseDown as unknown as EventListenerOrEventListenerObject
+        )
+        window.addEventListener(
+            'scroll',
+            handleMouseDown as unknown as EventListenerOrEventListenerObject
+        )
 
         return () => {
-            window.removeEventListener('mousedown', handleMouseDown)
-            window.removeEventListener('scroll', handleMouseDown)
+            window.removeEventListener(
+                'mousedown',
+                handleMouseDown as unknown as EventListenerOrEventListenerObject
+            )
+            window.removeEventListener(
+                'scroll',
+                handleMouseDown as unknown as EventListenerOrEventListenerObject
+            )
         }
     }, [])
 
-    const handleMouseDown = (event) => {
+    // const handleMouseDown = (event: React.MouseEvent) => {
+    const handleMouseDown = () => {
         if (
-            containerRef.current &&
-            !containerRef.current.contains(event.target)
+            containerRef.current // &&
+            // !containerRef.current === event.currentTarget
         ) {
             setMenuOpen(false)
         }

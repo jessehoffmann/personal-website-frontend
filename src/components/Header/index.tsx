@@ -6,9 +6,9 @@ import Monogram from '../../static/img/monogram.png'
 import MobileMenu from './MobileMenu'
 import { MonogramImage, StickyHeader } from './styled'
 
-const Header = () => {
-    const [scrolling, setScrolling] = useState(false)
-    const [windowDimension, setWindowDimension] = useState(null)
+const Header: React.FC = () => {
+    const [scrolling, setScrolling] = useState<boolean>(false)
+    const [windowDimension, setWindowDimension] = useState<number | null>(null)
 
     useEffect(() => {
         setWindowDimension(window.innerWidth)
@@ -28,7 +28,7 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    const handleScroll = () => {
+    const handleScroll = (): void => {
         const offset = window.scrollY
         setScrolling(offset > 0)
     }
@@ -40,7 +40,7 @@ const Header = () => {
             <StickyHeader scrolling={scrolling}>
                 <div className='center-header'>
                     <Link to='/'>
-                        <MonogramImage src={Monogram} />
+                        <MonogramImage src={Monogram} alt='Monogram' />
                     </Link>
                     <h1 className='header-title'>Jesse Thomas Hoffmann</h1>
 

@@ -3,6 +3,7 @@ import SkillChart from './SkillChart'
 import SkillList from './SkillList'
 import CategoryTabs from './CateogoryTabs'
 import { PageContainer, PageTitle } from '../styled'
+import { SkillCategories } from './data'
 
 export const categoryColors = {
     Languages: '#1976d2',
@@ -13,7 +14,9 @@ export const categoryColors = {
 }
 
 export default function Home() {
-    const [selectedCategory, setSelectedCategory] = useState('All')
+    const [selectedCategory, setSelectedCategory] = useState<
+        SkillCategories | 'All'
+    >('All')
 
     return (
         <main>

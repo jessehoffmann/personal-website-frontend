@@ -7,11 +7,17 @@ const LazyLoadImage = ({
     alt,
     bgColor = 'transparent',
     className,
+}: {
+    preview: string
+    src: string
+    alt: string
+    bgColor: string
+    className: string
 }) => {
-    const [currentImage, setCurrentImage] = useState(preview)
+    const [currentImage, setCurrentImage] = useState<string>(preview)
     const [loading, setLoading] = useState(true)
 
-    const fetchImage = (src) => {
+    const fetchImage = (src: string) => {
         const loadingImage = new Image()
         loadingImage.src = src
         loadingImage.onload = () => {

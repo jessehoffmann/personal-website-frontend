@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 
-export const StickyHeader = styled.header`
+interface StickyHeaderProps {
+    scrolling: boolean
+}
+
+interface MenuListProps {
+    visible: boolean
+}
+
+export const StickyHeader = styled.header<StickyHeaderProps>`
     padding: 15px;
     ${(props) =>
         props.scrolling &&
@@ -25,7 +33,7 @@ export const MonogramImage = styled.img`
     }
 `
 
-export const MenuList = styled.ul`
+export const MenuList = styled.ul<MenuListProps>`
     display: ${(props) => (props.visible ? 'block' : 'none')};
     position: absolute;
     right: 12px;

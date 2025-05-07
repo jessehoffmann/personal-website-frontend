@@ -25,6 +25,8 @@ const Home = () => {
                 alt='main-image'
                 preview={LandscapeSmall}
                 src={Landscape}
+                bgColor='transparent'
+                className=''
             />
             <FeaturedWorkContainer>
                 <PageTitle>My Featured Coding Projects</PageTitle>
@@ -54,7 +56,8 @@ const Home = () => {
                                         alt={project.title}
                                         preview={project.preview}
                                         src={project.image}
-                                        loading='lazy'
+                                        bgColor='transparent'
+                                        className=''
                                     />
                                 </ProjectImageFlexItem>
                             </ProjectLinkFlexContainer>

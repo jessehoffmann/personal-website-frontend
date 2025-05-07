@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 const ContactForm = () => {
     const [status, setStatus] = useState('')
 
-    const submitForm = (ev) => {
+    const submitForm = (ev: React.FormEvent) => {
         ev.preventDefault()
-        const form = ev.target
+        const form = ev.target as HTMLFormElement
         const data = new FormData(form)
         const xhr = new XMLHttpRequest()
         xhr.open(form.method, form.action)
@@ -32,7 +32,7 @@ const ContactForm = () => {
             <input
                 disabled={status === 'SUCCESS'}
                 className='input-field'
-                style={status === 'SUCCESS' ? { opacity: 0.5 } : null}
+                style={status === 'SUCCESS' ? { opacity: 0.5 } : undefined}
                 type='name'
                 name='name'
                 placeholder='Name'
@@ -41,7 +41,7 @@ const ContactForm = () => {
             <input
                 disabled={status === 'SUCCESS'}
                 className='input-field'
-                style={status === 'SUCCESS' ? { opacity: 0.5 } : null}
+                style={status === 'SUCCESS' ? { opacity: 0.5 } : undefined}
                 type='email'
                 name='email'
                 placeholder='Email'
@@ -50,8 +50,7 @@ const ContactForm = () => {
             <textarea
                 disabled={status === 'SUCCESS'}
                 className='input-field message'
-                style={status === 'SUCCESS' ? { opacity: 0.5 } : null}
-                type='text'
+                style={status === 'SUCCESS' ? { opacity: 0.5 } : undefined}
                 name='message'
                 placeholder='Message'
             />
