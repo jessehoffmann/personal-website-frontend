@@ -1,47 +1,45 @@
-import React, { useEffect, useState } from 'react'
-import { MenuButton, MenuImage, MenuList, MenuListItem } from './styled'
+import { useState } from 'react'
+import { MenuButton, MenuImage } from './styled'
 import MenuIcon from '../../static/img/menu.svg'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { useRef } from 'react'
+import {
+    Box,
+    Drawer,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemIcon,
+    ListItemText,
+} from '@mui/material'
+import AccountBoxIcon from '@mui/icons-material/AccountBox'
+import ChecklistIcon from '@mui/icons-material/Checklist'
+import MailIcon from '@mui/icons-material/Mail'
+
+const menuData = [
+    {
+        text: 'About',
+        link: '/about',
+        icon: <AccountBoxIcon />,
+    },
+    {
+        text: 'Skills',
+        link: '/skills',
+        icon: <ChecklistIcon />,
+    },
+    {
+        text: 'Contact',
+        link: '/contact',
+        icon: <MailIcon />,
+    },
+]
 
 const MobileMenu = () => {
     const containerRef = useRef<HTMLDivElement>(null)
     const [openMenu, setMenuOpen] = useState(false)
 
-    useEffect(() => {
-        window.addEventListener(
-            'mousedown',
-            handleMouseDown as unknown as EventListenerOrEventListenerObject
-        )
-        window.addEventListener(
-            'scroll',
-            handleMouseDown as unknown as EventListenerOrEventListenerObject
-        )
-
-        return () => {
-            window.removeEventListener(
-                'mousedown',
-                handleMouseDown as unknown as EventListenerOrEventListenerObject
-            )
-            window.removeEventListener(
-                'scroll',
-                handleMouseDown as unknown as EventListenerOrEventListenerObject
-            )
-        }
-    }, [])
-
-    // const handleMouseDown = (event: React.MouseEvent) => {
-    const handleMouseDown = () => {
-        if (
-            containerRef.current // &&
-            // !containerRef.current === event.currentTarget
-        ) {
-            setMenuOpen(false)
-        }
-    }
-
     const handleClick = () => {
-        setMenuOpen(!openMenu)
+        setMenuOpen((open) => !open)
     }
 
     return (
@@ -49,23 +47,30 @@ const MobileMenu = () => {
             <MenuButton onClick={handleClick}>
                 <MenuImage src={MenuIcon} />
             </MenuButton>
-            <MenuList visible={openMenu}>
-                <MenuListItem>
-                    <Link to='/about' onClick={handleClick}>
-                        About
-                    </Link>
-                </MenuListItem>
-                <MenuListItem>
-                    <Link to='/skills' onClick={handleClick}>
-                        Skills
-                    </Link>
-                </MenuListItem>
-                <MenuListItem>
-                    <Link to='/contact' onClick={handleClick}>
-                        Contact
-                    </Link>
-                </MenuListItem>
-            </MenuList>
+            <Drawer open={openMenu} anchor='right' onClose={handleClick}>
+                <Box
+                    sx={{ width: 180 }}
+                    role='presentation'
+                    onClick={handleClick}
+                >
+                    <List>
+                        {menuData.map(({ text, link, icon }) => (
+                            <ListItem
+                                key={text}
+                                disablePadding
+                                sx={{ '& .MuiListItemButton-root': { p: 3 } }}
+                            >
+                                <ListItemButton>
+                                    <ListItemIcon>{icon}</ListItemIcon>
+                                    <ListItemText
+                                        primary={<Link to={link}>{text}</Link>}
+                                    />
+                                </ListItemButton>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Box>
+            </Drawer>
         </div>
     )
 }

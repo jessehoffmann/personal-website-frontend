@@ -18,17 +18,15 @@ import './static/css/styles.css'
 const App: React.FC = () => {
     return (
         <Router>
-            <div>
-                <Header />
-                <Routes>
-                    <Route path='/about' element={<About />} />
-                    <Route path='/contact' element={<Contact />} />
-                    {/* <Route path='/resume' element={<Resume />} /> */}
-                    <Route path='/' element={<Home />} />
-                    <Route path='/skills' element={<Skills />} />
-                </Routes>
-                <Footer />
-            </div>
+            <Header />
+            <Routes>
+                <Route path='/about' element={<About />} />
+                <Route path='/contact' element={<Contact />} />
+                {/* <Route path='/resume' element={<Resume />} /> */}
+                <Route path='/' element={<Home />} />
+                <Route path='/skills' element={<Skills />} />
+            </Routes>
+            <Footer />
         </Router>
     )
 }

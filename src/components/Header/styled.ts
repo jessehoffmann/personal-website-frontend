@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material'
 import styled from 'styled-components'
 
 interface StickyHeaderProps {
@@ -44,8 +45,8 @@ export const MenuList = styled.ul<MenuListProps>`
     border-radius: 10px;
 `
 
-export const MenuListItem = styled.li`
-    margin: 10px;
+export const MenuListItem = styled(Typography)`
+    padding: 10px;
 `
 
 export const MenuButton = styled.button`
