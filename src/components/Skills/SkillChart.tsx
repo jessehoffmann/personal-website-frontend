@@ -84,7 +84,7 @@ export default function SkillChart() {
             margin={{ right: 50 }}
             sx={{
                 '& svg': {
-                    // touchAction: 'auto',
+                    touchAction: 'auto',
                 },
             }}
         />

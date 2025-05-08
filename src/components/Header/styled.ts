@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { ButtonBase, Typography } from '@mui/material'
 import styled from 'styled-components'
 
 interface StickyHeaderProps {
@@ -25,13 +25,7 @@ export const StickyHeader = styled.header<StickyHeaderProps>`
 export const MonogramImage = styled.img`
     height: 50px;
     width: 50px;
-    margin-left: 20px;
-    margin-top: 4px;
     object-fit: contain;
-
-    @media (max-width: 1000px) {
-        margin-left: 0px;
-    }
 `
 
 export const MenuList = styled.ul<MenuListProps>`
@@ -49,7 +43,7 @@ export const MenuListItem = styled(Typography)`
     padding: 10px;
 `
 
-export const MenuButton = styled.button`
+export const MenuButton = styled(ButtonBase)`
     background-color: white;
     padding: 5px !important;
     border: 0px;
@@ -57,6 +51,6 @@ export const MenuButton = styled.button`
 `
 
 export const MenuImage = styled.img`
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
 `

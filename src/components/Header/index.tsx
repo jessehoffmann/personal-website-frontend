@@ -5,6 +5,7 @@ import { Link } from 'react-router'
 import Monogram from '../../static/img/monogram.png'
 import MobileMenu from './MobileMenu'
 import { MonogramImage, StickyHeader } from './styled'
+import { ButtonBase } from '@mui/material'
 
 const Header: React.FC = () => {
     const [scrolling, setScrolling] = useState<boolean>(false)
@@ -39,9 +40,12 @@ const Header: React.FC = () => {
         <div>
             <StickyHeader scrolling={scrolling}>
                 <div className='center-header'>
-                    <Link to='/'>
-                        <MonogramImage src={Monogram} alt='Monogram' />
-                    </Link>
+                    <ButtonBase sx={{ ml: { sx: 0, md: '20px' }, mat: '4px' }}>
+                        <Link to='/'>
+                            <MonogramImage src={Monogram} alt='Monogram' />
+                        </Link>
+                    </ButtonBase>
+
                     <h1 className='header-title'>Jesse Thomas Hoffmann</h1>
 
                     {isMobile ? (

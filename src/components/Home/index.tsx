@@ -17,6 +17,7 @@ import {
 } from './styled'
 import { PageTitle } from '../styled'
 import { projectsList } from './data'
+// import { ButtonBase } from '@mui/material'
 
 const Home = () => {
     return (
@@ -33,6 +34,7 @@ const Home = () => {
                 <div className='flex-container'>
                     {projectsList.map((project, index) => (
                         <div className={`blocks project${index}`} key={index}>
+                            {/* <ButtonBase> */}
                             <ProjectLinkFlexContainer
                                 href={project.link}
                                 target='_blank'
@@ -61,6 +63,7 @@ const Home = () => {
                                     />
                                 </ProjectImageFlexItem>
                             </ProjectLinkFlexContainer>
+                            {/* </ButtonBase> */}
                         </div>
                     ))}
                 </div>
