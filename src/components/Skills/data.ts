@@ -33,5 +33,5 @@ export const skills: SkillProps[] = [
     { name: 'AWS Lambda', level: 8, category: SkillCategories.Cloud },
     { name: 'AWS SQS/SNS', level: 9, category: SkillCategories.Cloud },
     { name: 'AWS RDS', level: 6, category: SkillCategories.Cloud },
-    { name: 'Firebase', level: 7, category: SkillCategories.Cloud },
+    { name: 'Firebase', level: 9, category: SkillCategories.Cloud },
 ]
