@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { Link } from 'react-router'
 
 //Assets
 import Monogram from '../../static/img/monogram.png'
 import MobileMenu from './MobileMenu'
-import { MonogramImage, StickyHeader } from './styled'
+import { 
+    MonogramImage, 
+    StickyHeader, 
+    HeaderContent, 
+    HeaderTitle, 
+    HeaderLinks 
+} from './styled'
 import { ButtonBase } from '@mui/material'
+import { debounce } from 'lodash'
+
+const SCROLL_THRESHOLD = 10
 
 const Header: React.FC = () => {
     const [scrolling, setScrolling] = useState<boolean>(false)
@@ -15,57 +24,60 @@ const Header: React.FC = () => {
         setWindowDimension(window.innerWidth)
     }, [])
 
-    useEffect(() => {
-        function handleResize() {
-            setWindowDimension(window.innerWidth)
-        }
+    const handleResize = useCallback(() => {
+        setWindowDimension(window.innerWidth)
+    }, [])
 
+    useEffect(() => {
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
+    }, [handleResize])
+
+    const handleScroll = useCallback(() => {
+        const offset = window.scrollY
+        setScrolling(offset > SCROLL_THRESHOLD)
     }, [])
+
+    const debouncedScroll = useCallback(
+        debounce(handleScroll, 100),
+        [handleScroll]
+    )
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+        window.addEventListener('scroll', debouncedScroll)
+        return () => window.removeEventListener('scroll', debouncedScroll)
+    }, [debouncedScroll])
 
-    const handleScroll = (): void => {
-        const offset = window.scrollY
-        setScrolling(offset > 0)
-    }
-
-    const isMobile = windowDimension && windowDimension <= 640
+    const isMobile = windowDimension && windowDimension <= 720
 
     return (
-        <div>
-            <StickyHeader scrolling={scrolling}>
-                <div className='center-header'>
-                    <ButtonBase sx={{ ml: { sx: 0, md: '20px' }, mat: '4px' }}>
-                        <Link to='/'>
-                            <MonogramImage src={Monogram} alt='Monogram' />
-                        </Link>
-                    </ButtonBase>
+        <StickyHeader scrolling={scrolling}>
+            <HeaderContent>
+                <ButtonBase sx={{ ml: { xs: 0, md: '20px' }, mt: '4px' }}>
+                    <Link to='/'>
+                        <MonogramImage src={Monogram} alt='Monogram' />
+                    </Link>
+                </ButtonBase>
 
-                    <h1 className='header-title'>Jesse Thomas Hoffmann</h1>
+                <HeaderTitle>Jesse Thomas Hoffmann</HeaderTitle>
 
-                    {isMobile ? (
-                        <MobileMenu />
-                    ) : (
-                        <>
-                            <h3 className='header-links'>
-                                <Link to='/about'>About</Link>
-                            </h3>
-                            <h3 className='header-links'>
-                                <Link to='/skills'>Skills</Link>
-                            </h3>
-                            <h3 className='header-links'>
-                                <Link to='/contact'>Contact</Link>
-                            </h3>
-                        </>
-                    )}
-                </div>
-            </StickyHeader>
-        </div>
+                {isMobile ? (
+                    <MobileMenu />
+                ) : (
+                    <>
+                        <HeaderLinks>
+                            <Link to='/about'>About</Link>
+                        </HeaderLinks>
+                        <HeaderLinks>
+                            <Link to='/skills'>Skills</Link>
+                        </HeaderLinks>
+                        <HeaderLinks>
+                            <Link to='/contact'>Contact</Link>
+                        </HeaderLinks>
+                    </>
+                )}
+            </HeaderContent>
+        </StickyHeader>
     )
 }
 

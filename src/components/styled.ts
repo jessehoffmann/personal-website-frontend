@@ -4,6 +4,10 @@ export const PageContainer = styled.div`
     max-width: 1000px;
     margin: auto;
     margin-top: 30px;
+
+    @media (max-width: 500px) {
+        margin-top: 20px;
+    }
 `
 
 export const PageTitle = styled.h3`
