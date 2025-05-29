@@ -1,5 +1,13 @@
 import React, { useState, useRef } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
+import { 
+    TextField, 
+    Button, 
+    Box, 
+    Container,
+    Alert
+} from '@mui/material'
+import SendIcon from '@mui/icons-material/Send'
 
 const ContactForm = () => {
     const [status, setStatus] = useState('')
@@ -44,72 +52,85 @@ const ContactForm = () => {
     }
 
     return (
-        <form
-            onSubmit={submitForm}
-            action='https://formspree.io/mzbavqpp'
-            method='POST'
-            className='contact-form'
-        >
-            <br />
-            <input
-                disabled={status === 'SUCCESS'}
-                className='input-field'
-                style={status === 'SUCCESS' ? { opacity: 0.5 } : undefined}
-                type='name'
-                name='name'
-                placeholder='Name'
-                required
-            />
-            <br />
-            <input
-                disabled={status === 'SUCCESS'}
-                className='input-field'
-                style={status === 'SUCCESS' ? { opacity: 0.5 } : undefined}
-                type='email'
-                name='email'
-                placeholder='Email'
-                required
-            />
-            <br />
-            <textarea
-                disabled={status === 'SUCCESS'}
-                className='input-field message'
-                style={status === 'SUCCESS' ? { opacity: 0.5 } : undefined}
-                name='message'
-                placeholder='Message'
-                required
-            />
-            <br />
-            <div style={{ margin: '20px 0' }}>
-                <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey="6Ld6-U4rAAAAAOd1vtGL_Hj-_QKfJSd3W_57DbQu"
-                    onChange={handleRecaptchaChange}
-                    size="normal"
-                />
-            </div>
-            {status === 'VERIFY' && (
-                <p style={{ textAlign: 'center', color: 'red' }}>
-                    Please verify that you are not a robot
-                </p>
-            )}
-            {status === 'SUCCESS' ? (
-                <p style={{ textAlign: 'center' }}>Thanks!</p>
-            ) : (
-                <button 
-                    disabled={status === 'SUCCESS' || !isVerified} 
-                    className='submit'
-                    style={{ opacity: !isVerified ? 0.5 : 1 }}
+        <Container maxWidth="sm" sx={{ mt: 2 }}>
+                <form
+                    onSubmit={submitForm}
+                    action='https://formspree.io/mzbavqpp'
+                    method='POST'
                 >
-                    Submit
-                </button>
-            )}
-            {status === 'ERROR' && (
-                <p style={{ textAlign: 'center' }}>
-                    Ooops! There was an error.
-                </p>
-            )}
-        </form>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, textIndent: 0 }}>
+                        <TextField
+                            disabled={status === 'SUCCESS'}
+                            name='name'
+                            label='Name'
+                            variant='outlined'
+                            required
+                            fullWidth
+                        />
+                        
+                        <TextField
+                            disabled={status === 'SUCCESS'}
+                            name='email'
+                            label='Email'
+                            type='email'
+                            variant='outlined'
+                            required
+                            fullWidth
+                        />
+                        
+                        <TextField
+                            disabled={status === 'SUCCESS'}
+                            name='message'
+                            label='Message'
+                            multiline
+                            rows={4}
+                            variant='outlined'
+                            required
+                            fullWidth
+                        />
+
+                        <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
+                            <ReCAPTCHA
+                                ref={recaptchaRef}
+                                sitekey="6Ld6-U4rAAAAAOd1vtGL_Hj-_QKfJSd3W_57DbQu"
+                                onChange={handleRecaptchaChange}
+                                size="normal"
+                            />
+                        </Box>
+
+                        {status === 'VERIFY' && (
+                            <Alert severity="warning">
+                                Please verify that you are not a robot
+                            </Alert>
+                        )}
+
+                        {status === 'SUCCESS' ? (
+                            <Alert severity="success">
+                                Thanks for your message!
+                            </Alert>
+                        ) : (
+                            <Button
+                                type="submit"
+                                variant="contained"
+                                color="primary"
+                                disabled={status === 'SUCCESS' || !isVerified}
+                                endIcon={<SendIcon />}
+                                sx={{ 
+                                    opacity: !isVerified ? 0.5 : 1,
+                                }}
+                            >
+                                Send Message
+                            </Button>
+                        )}
+
+                        {status === 'ERROR' && (
+                            <Alert severity="error">
+                                Oops! There was an error sending your message.
+                            </Alert>
+                        )}
+                    </Box>
+                </form>
+        </Container>
     )
 }
 
