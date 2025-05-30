@@ -6,6 +6,7 @@ import Map from '../../static/img/map.jpg'
 import MapSmall from '../../static/img/map-small.jpg'
 import Portfolio from '../../static/img/portfolio.jpg'
 import PortfolioSmall from '../../static/img/portfolio-small.jpg'
+import Blackjack from '../../static/img/blackjack.jpg'
 
 export const projectsList = [
     {
@@ -51,5 +52,17 @@ export const projectsList = [
         title: 'Map',
         description:
             'Javascript application that utilizes Knockout.js features of date-binding and automatic UI refresh. It also takes advantages of Ajax (jQuery) for API requests.',
+    },
+    {
+        link: 'https://github.com/jessehoffmann/oop-applications',
+        image: Blackjack,
+        preview: Blackjack,
+        title: 'OOP Applications',
+        description:
+            'Various Java applications utilizing object oriented design principles. Applications include:',
+                    details: [
+            '• Single player Blackjack game',
+            '• Expense tracker',
+        ],
     },
 ]
