@@ -1,68 +1,85 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Personal Website Frontend
 
-## Available Scripts
+This application was designed as my personal portfolio website. The project demonstrates modern frontend development with React, TypeScript, responsive design, and API integration for contact form submissions.
 
-In the project directory, you can run:
+## Requirements
 
-### `npm start`
+You need the following installed on your computer:
+- Node.js (recommended current LTS)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### macOS 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+On macOS, I recommend installing Node.js through `nvm` (Node Version Manager) using Homebrew:
 
-### `npm test`
+```bash
+brew install nvm
+nvm install --lts
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Direct download option: [https://nodejs.org/](https://nodejs.org/)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+From the `personal-website-frontend` directory, run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Install dependencies
+npm install
 
-### `npm run eject`
+# Start the local development server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This project uses:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- React 19
+- TypeScript
+- React Router
+- Material UI (including MUI X Charts)
+- Styled Components + Emotion
+- Formspree + Google reCAPTCHA (for contact form protection)
 
-## Learn More
+Additional development commands:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Run tests
+npm test
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Build for production
+npm run build
 
-### Code Splitting
+# Lint the project
+npm run lint
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# Auto-fix lint issues
+npm run lint:fix
 
-### Analyzing the Bundle Size
+# Format files
+npm run format
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Features
 
-### Making a Progressive Web App
+- Multi-page portfolio layout (`Home`, `About`, `Skills`, and `Contact`)
+- Featured project cards with external links and project details
+- Skills section with chart visualization and category filtering
+- Responsive navigation with mobile menu behavior
+- Contact form integration with Formspree and reCAPTCHA validation
+- Custom styling and reusable UI components throughout the app
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Deployment
 
-### Advanced Configuration
+This frontend can be deployed to any static hosting provider. The portfolio content references AWS Amplify as a deployment platform used for the live site.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+To create a production build:
 
-### Deployment
+```bash
+npm run build
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This generates an optimized `build` directory ready for production deployment
