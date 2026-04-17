@@ -74,7 +74,13 @@ npm run format
 
 ## Deployment
 
-This frontend can be deployed to any static hosting provider. The portfolio content references AWS Amplify as a deployment platform used for the live site.
+This frontend can be deployed to any static hosting provider. Automated deployments are currently configured with AWS Amplify.
+
+Amplify configuration:
+- Production branch: `master`
+- Domain: [https://jessehoffmann.com](https://jessehoffmann.com)
+
+### AWS Amplify build spec
 
 To create a production build:
 
