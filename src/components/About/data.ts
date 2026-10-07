@@ -61,4 +61,4 @@ export const interests: Interest[] = [
     },
 ]
 
-export const photoCredit = 'The landscape photos on this site are my own.'
+export const photoCredit = 'All the landscape photography you see on this site was taken by me, Jesse Thomas Hoffmann.'

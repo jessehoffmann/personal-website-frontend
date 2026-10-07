@@ -12,6 +12,7 @@ import {
 
 import Headshot from '../../static/img/headshot.jpg'
 import DeschutesFrost from '../../static/img/deschutes-frost.webp'
+import { deschutesFrostPreview } from '../../static/img/previews'
 import PageColumn from '../PageColumn'
 import PageHeader from '../PageHeader'
 import SectionHeading from '../SectionHeading'
@@ -35,6 +36,7 @@ const About = () => {
                 title='About'
                 subtitle='Who I am, at work and away from it.'
                 image={DeschutesFrost}
+                preview={deschutesFrostPreview}
                 imagePosition='center 38%'
             />
             <PageColumn sx={{ pt: 5, pb: 2 }}>
@@ -236,16 +238,20 @@ const About = () => {
                     </Box>
 
                     <Stack
-                        direction='row'
+                        direction={{ xs: 'column', sm: 'row' }}
                         useFlexGap
-                        spacing={1.75}
-                        sx={{ justifyContent: 'center', flexWrap: 'wrap' }}
+                        spacing={{ xs: 1.5, sm: 1.75 }}
+                        sx={{
+                            alignItems: { xs: 'stretch', sm: 'center' },
+                            justifyContent: { sm: 'center' },
+                        }}
                     >
                         <Button
                             component={RouterLink}
                             to='/experience'
                             variant='contained'
                             size='large'
+                            sx={{ width: { xs: '100%', sm: 'auto' } }}
                         >
                             See my experience
                         </Button>
@@ -254,7 +260,10 @@ const About = () => {
                             to='/contact'
                             variant='outlined'
                             size='large'
-                            sx={outlinedButtonSx}
+                            sx={{
+                                width: { xs: '100%', sm: 'auto' },
+                                ...outlinedButtonSx,
+                            }}
                         >
                             Get in touch
                         </Button>

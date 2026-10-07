@@ -1,16 +1,18 @@
 import React from 'react'
-import { Card, Divider, Link, Stack, Typography } from '@mui/material'
+import { Box, Card, Divider, Link, Stack, Typography } from '@mui/material'
 
 import ContactForm from '../ContactForm'
 import PageColumn from '../PageColumn'
 import PageHeader from '../PageHeader'
 import resumePdf from '../../static/Jesse_Thomas_Hoffmann_Resume.pdf'
 import Beach from '../../static/img/walk-on-the-beach.webp'
+import { beachPreview } from '../../static/img/previews'
 import { contactIntro, contactLinks } from './data'
 
 type ContactLink = {
     label: string
     text: string
+    compactText?: string
     href: string
     download?: boolean
 }
@@ -32,6 +34,7 @@ const Contact = () => {
                 title='Contact'
                 subtitle='The quickest ways to reach me.'
                 image={Beach}
+                preview={beachPreview}
                 imagePosition='center 30%'
             />
             <PageColumn sx={{ pt: 5 }}>
@@ -69,7 +72,7 @@ const Contact = () => {
                                             useFlexGap
                                             spacing={2}
                                             sx={{
-                                                flexWrap: 'wrap',
+                                                flexWrap: 'nowrap',
                                                 alignItems: 'center',
                                                 justifyContent: 'space-between',
                                                 minHeight: 56,
@@ -79,6 +82,7 @@ const Contact = () => {
                                             <Typography
                                                 variant='overline'
                                                 color='text.secondary'
+                                                sx={{ flexShrink: 0 }}
                                             >
                                                 {link.label}
                                             </Typography>
@@ -104,8 +108,39 @@ const Contact = () => {
                                                 }
                                                 color='primary'
                                                 underline='always'
+                                                sx={{
+                                                    textAlign: 'right',
+                                                    minWidth: 0,
+                                                }}
                                             >
-                                                {link.text}
+                                                {link.compactText ? (
+                                                    <>
+                                                        <Box
+                                                            component='span'
+                                                            sx={{
+                                                                display: {
+                                                                    xs: 'none',
+                                                                    sm: 'inline',
+                                                                },
+                                                            }}
+                                                        >
+                                                            {link.text}
+                                                        </Box>
+                                                        <Box
+                                                            component='span'
+                                                            sx={{
+                                                                display: {
+                                                                    xs: 'inline',
+                                                                    sm: 'none',
+                                                                },
+                                                            }}
+                                                        >
+                                                            {link.compactText}
+                                                        </Box>
+                                                    </>
+                                                ) : (
+                                                    link.text
+                                                )}
                                             </Link>
                                         </Stack>
                                     </React.Fragment>

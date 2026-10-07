@@ -19,6 +19,7 @@ import PageHeader from '../PageHeader'
 import SectionHeading from '../SectionHeading'
 import resumePdf from '../../static/Jesse_Thomas_Hoffmann_Resume.pdf'
 import Seattle from '../../static/img/seattle.webp'
+import { seattlePreview } from '../../static/img/previews'
 import { caseStudies, howILead, timeline } from './data'
 
 const StudyParagraph = ({ label, text }: { label: string; text: string }) => (
@@ -133,6 +134,7 @@ const Experience = () => {
                 title='Experience'
                 subtitle="Where I've led teams, what changed, and how I work."
                 image={Seattle}
+                preview={seattlePreview}
                 imagePosition='center 52%'
             />
             <PageColumn sx={{ pt: 5 }}>

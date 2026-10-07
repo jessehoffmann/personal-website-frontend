@@ -9,12 +9,14 @@ export const contactLinks = [
     },
     {
         label: 'LinkedIn',
-        text: 'www.linkedin.com/in/jessehoffmann',
+        text: 'linkedin.com/in/jessehoffmann',
+        compactText: 'jessehoffmann',
         href: 'https://www.linkedin.com/in/jessehoffmann/',
     },
     {
         label: 'GitHub',
-        text: 'www.github.com/jessehoffmann',
+        text: 'github.com/jessehoffmann',
+        compactText: 'jessehoffmann',
         href: 'https://github.com/jessehoffmann',
     },
 ]

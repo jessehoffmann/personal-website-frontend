@@ -11,24 +11,24 @@ import {
 } from '@mui/material'
 
 import BackgroundLandscape from '../../static/img/fjallabak-2025-jesse-thomas-hoffmann.webp'
+import { fjallabakPreview } from '../../static/img/previews'
 import PageColumn from '../PageColumn'
+import ProgressiveBackground from '../common/ProgressiveBackground'
 import SectionHeading from '../SectionHeading'
 import { hero, leadershipContext, leadershipHighlights, proofPoints } from './data'
 
 const Home = () => {
     return (
         <main>
-            <Box
+            <ProgressiveBackground
                 component='section'
+                image={BackgroundLandscape}
+                preview={fjallabakPreview}
+                imagePosition='center 32%'
                 sx={{
-                    position: 'relative',
                     minHeight: { xs: 480, sm: 600 },
                     display: 'flex',
                     alignItems: 'center',
-                    overflow: 'hidden',
-                    backgroundImage: `url(${BackgroundLandscape})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center 32%',
                 }}
             >
                 <Box
@@ -112,7 +112,7 @@ const Home = () => {
                         </Stack>
                     </Stack>
                 </PageColumn>
-            </Box>
+            </ProgressiveBackground>
 
             <Box sx={{ position: 'relative', zIndex: 1, mt: '-76px' }}>
                 <PageColumn

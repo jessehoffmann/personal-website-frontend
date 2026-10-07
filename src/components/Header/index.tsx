@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router'
 import { useTheme } from '@mui/material/styles'
 
 //Assets
-import Logo from '../../static/img/jth-logo-circle.png'
+import Logo from '../../static/img/jth-monogram.png'
 import MobileMenu from './MobileMenu'
 import {
     Brand,

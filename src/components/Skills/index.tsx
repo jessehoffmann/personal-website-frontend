@@ -17,6 +17,7 @@ import PageColumn from '../PageColumn'
 import PageHeader from '../PageHeader'
 import SectionHeading from '../SectionHeading'
 import Hoh from '../../static/img/hoh.webp'
+import { hohPreview } from '../../static/img/previews'
 import { leadershipSkills, technicalSkills } from './data'
 
 const Skills = () => {
@@ -26,6 +27,7 @@ const Skills = () => {
                 title='Skills'
                 subtitle='What I do as a leader and the technology I work in.'
                 image={Hoh}
+                preview={hohPreview}
                 imagePosition='center 60%'
             />
             <PageColumn sx={{ pt: 5 }}>
@@ -56,7 +58,15 @@ const Skills = () => {
                                             minWidth: 0,
                                         }}
                                     >
-                                        <Typography variant='h5'>
+                                        <Typography
+                                            component='h3'
+                                            sx={{
+                                                fontSize: 18,
+                                                fontWeight: 600,
+                                                lineHeight: 1.3,
+                                                color: 'primary.main',
+                                            }}
+                                        >
                                             {group.title}
                                         </Typography>
                                         <List

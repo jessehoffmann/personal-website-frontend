@@ -2,7 +2,6 @@ import React from 'react'
 import { Box, Link, Stack, Typography } from '@mui/material'
 
 import { pageColumnSx } from '../PageColumn'
-import resumePdf from '../../static/Jesse_Thomas_Hoffmann_Resume.pdf'
 
 const links = [
     {
@@ -16,11 +15,6 @@ const links = [
     {
         label: 'Email',
         href: 'mailto:hoffmann.jesse@gmail.com',
-    },
-    {
-        label: 'Resume',
-        href: resumePdf,
-        download: 'Jesse_Thomas_Hoffmann_Resume.pdf',
     },
 ]
 
@@ -63,7 +57,6 @@ const Footer = () => {
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                download={link.download}
                                 target={external ? '_blank' : undefined}
                                 rel={external ? 'noreferrer' : undefined}
                                 underline='hover'

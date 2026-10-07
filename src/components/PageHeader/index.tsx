@@ -1,11 +1,13 @@
 import { Box, Stack, Typography } from '@mui/material'
 
 import PageColumn from '../PageColumn'
+import ProgressiveBackground from '../common/ProgressiveBackground'
 
 type PageHeaderProps = {
     title: string
     subtitle: string
     image: string
+    preview: string
     imagePosition: string
 }
 
@@ -13,20 +15,19 @@ const PageHeader = ({
     title,
     subtitle,
     image,
+    preview,
     imagePosition,
 }: PageHeaderProps) => {
     return (
-        <Box
+        <ProgressiveBackground
             component='section'
+            image={image}
+            preview={preview}
+            imagePosition={imagePosition}
             sx={{
-                position: 'relative',
                 height: { xs: 148, sm: 200 },
                 display: 'flex',
                 alignItems: 'center',
-                overflow: 'hidden',
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: imagePosition,
             }}
         >
             <Box
@@ -64,7 +65,7 @@ const PageHeader = ({
                     </Typography>
                 </Stack>
             </PageColumn>
-        </Box>
+        </ProgressiveBackground>
     )
 }
 
