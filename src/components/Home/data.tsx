@@ -1,13 +1,3 @@
-import Catalog from '../../static/img/catalog.jpg'
-import CatalogSmall from '../../static/img/catalog-small.jpg'
-import Movie from '../../static/img/movie.jpg'
-import MovieSmall from '../../static/img/movie-small.jpg'
-import Map from '../../static/img/map.jpg'
-import MapSmall from '../../static/img/map-small.jpg'
-import Portfolio from '../../static/img/portfolio.jpg'
-import PortfolioSmall from '../../static/img/portfolio-small.jpg'
-import Blackjack from '../../static/img/blackjack.jpg'
-
 export const hero = {
     eyebrow: 'Software Engineering Leader',
     headline: ['Process Oriented.', 'Quality Focused.'],
@@ -59,8 +49,6 @@ export const leadershipHighlights = [
 export const projectsList = [
     {
         link: 'https://github.com/jessehoffmann/Personal-Website',
-        image: Portfolio,
-        preview: PortfolioSmall,
         title: 'Portfolio',
         technologies: 'React, React Router, MUI, AWS Amplify, Formspree',
         description:
@@ -73,8 +61,6 @@ export const projectsList = [
     },
     {
         link: 'https://github.com/jessehoffmann/Catalog',
-        image: Catalog,
-        preview: CatalogSmall,
         title: 'Catalog',
         technologies: 'Python, Flask, SQLAlchemy, OAuth 2.0',
         description:
@@ -88,8 +74,6 @@ export const projectsList = [
     },
     {
         link: 'https://github.com/jessehoffmann/Movie-Trailer-Website',
-        image: Movie,
-        preview: MovieSmall,
         title: 'Movie Trailers',
         technologies: 'Python, HTML, CSS',
         description:
@@ -97,8 +81,6 @@ export const projectsList = [
     },
     {
         link: 'https://github.com/jessehoffmann/Neighborhood-Map',
-        image: Map,
-        preview: MapSmall,
         title: 'Map',
         technologies: 'JavaScript, Knockout.js, jQuery',
         description:
@@ -106,8 +88,6 @@ export const projectsList = [
     },
     {
         link: 'https://github.com/jessehoffmann/oop-applications',
-        image: Blackjack,
-        preview: Blackjack,
         title: 'OOP Applications',
         technologies: 'Java: Blackjack game, expense tracker',
         description:

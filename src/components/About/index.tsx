@@ -11,7 +11,7 @@ import {
 } from '@mui/material'
 
 import Headshot from '../../static/img/headshot.jpg'
-import DeschutesFrost from '../../static/img/deschutes-frost.jpg'
+import DeschutesFrost from '../../static/img/deschutes-frost.webp'
 import PageColumn from '../PageColumn'
 import PageHeader from '../PageHeader'
 import SectionHeading from '../SectionHeading'

@@ -16,7 +16,7 @@ import {
 import PageColumn from '../PageColumn'
 import PageHeader from '../PageHeader'
 import SectionHeading from '../SectionHeading'
-import Hoh from '../../static/img/hoh.jpg'
+import Hoh from '../../static/img/hoh.webp'
 import { leadershipSkills, technicalSkills } from './data'
 
 const Skills = () => {

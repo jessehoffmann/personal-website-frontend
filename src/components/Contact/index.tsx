@@ -5,7 +5,7 @@ import ContactForm from '../ContactForm'
 import PageColumn from '../PageColumn'
 import PageHeader from '../PageHeader'
 import resumePdf from '../../static/Jesse_Thomas_Hoffmann_Resume.pdf'
-import Beach from '../../static/img/walk-on-the-beach.jpg'
+import Beach from '../../static/img/walk-on-the-beach.webp'
 import { contactIntro, contactLinks } from './data'
 
 type ContactLink = {

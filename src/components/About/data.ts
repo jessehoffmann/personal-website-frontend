@@ -1,6 +1,6 @@
-import Backpacking from '../../static/img/backpacking.jpg'
-import Espresso from '../../static/img/espresso.jpg'
-import SurfersSunset from '../../static/img/surfers-sunset.jpg'
+import Backpacking from '../../static/img/backpacking.webp'
+import Espresso from '../../static/img/espresso.webp'
+import SurfersSunset from '../../static/img/surfers-sunset.webp'
 
 export const aboutBio = [
     "I'm a software engineering lead with broad expertise in full-stack software development and architecture. I specialize in optimizing development processes and guiding engineers to deliver high quality software while fostering a culture of collaboration and continuous improvement.",

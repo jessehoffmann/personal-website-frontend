@@ -18,7 +18,7 @@ import PageColumn from '../PageColumn'
 import PageHeader from '../PageHeader'
 import SectionHeading from '../SectionHeading'
 import resumePdf from '../../static/Jesse_Thomas_Hoffmann_Resume.pdf'
-import Seattle from '../../static/img/seattle.jpg'
+import Seattle from '../../static/img/seattle.webp'
 import { caseStudies, howILead, timeline } from './data'
 
 const StudyParagraph = ({ label, text }: { label: string; text: string }) => (
