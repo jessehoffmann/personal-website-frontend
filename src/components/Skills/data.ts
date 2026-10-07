@@ -1,37 +1,69 @@
-export enum SkillCategories {
-    Languages = 'Languages',
-    Frameworks = 'Frameworks',
-    Tools = 'Tools',
-    Testing = 'Testing',
-    Cloud = 'Cloud',
-}
+export const leadershipSkills = [
+    {
+        title: 'People',
+        items: [
+            'Mentoring and developer growth',
+            'Leading software teams',
+            'Interviewing and selecting engineers',
+            'Annual performance evaluations',
+        ],
+    },
+    {
+        title: 'Delivery',
+        items: [
+            'Guiding teams through high-impact releases',
+            'Resolving workflow inefficiencies',
+            'Sprint planning and technical roadmaps',
+            'Software release and metrics tracking',
+        ],
+    },
+    {
+        title: 'Product and cross-functional',
+        items: [
+            'Aligning product goals with technical requirements',
+            'Building a culture of collaboration',
+            'Working with cross-functional stakeholders',
+        ],
+    },
+    {
+        title: 'Technical direction',
+        items: [
+            'Full stack system design and architecture',
+            'Automated testing strategy',
+            'Clean, well-documented codebases',
+        ],
+    },
+]
 
-export interface SkillProps {
-    name: string
-    level: number
-    category: SkillCategories
-}
-
-export const skills: SkillProps[] = [
-    { name: 'TypeScript', level: 9, category: SkillCategories.Languages },
-    { name: 'JavaScript', level: 9, category: SkillCategories.Languages },
-    { name: 'Python', level: 7, category: SkillCategories.Languages },
-    { name: 'SQL', level: 6, category: SkillCategories.Languages },
-    { name: 'Java', level: 5, category: SkillCategories.Languages },
-    { name: 'PHP', level: 3, category: SkillCategories.Languages },
-    { name: 'React', level: 9, category: SkillCategories.Frameworks },
-    { name: 'Next.js', level: 8, category: SkillCategories.Frameworks },
-    { name: 'Flask', level: 4, category: SkillCategories.Frameworks },
-    { name: 'Django', level: 5, category: SkillCategories.Frameworks },
-    { name: 'Express', level: 8, category: SkillCategories.Frameworks },
-    { name: 'Apollo Server', level: 8, category: SkillCategories.Frameworks },
-    { name: 'Docker', level: 7, category: SkillCategories.Tools },
-    { name: 'GitLab CI/CD', level: 7, category: SkillCategories.Tools },
-    { name: 'Jest', level: 8, category: SkillCategories.Testing },
-    { name: 'Cypress', level: 7, category: SkillCategories.Testing },
-    { name: 'Cucumber', level: 8, category: SkillCategories.Testing },
-    { name: 'AWS Lambda', level: 8, category: SkillCategories.Cloud },
-    { name: 'AWS SQS/SNS', level: 9, category: SkillCategories.Cloud },
-    { name: 'AWS RDS', level: 6, category: SkillCategories.Cloud },
-    { name: 'Firebase', level: 9, category: SkillCategories.Cloud },
+export const technicalSkills = [
+    {
+        label: 'Languages',
+        outlined: false,
+        skills: ['TypeScript', 'JavaScript', 'Python', 'SQL'],
+    },
+    {
+        label: 'Frameworks',
+        outlined: false,
+        skills: ['React', 'Next.js', 'Express', 'Apollo Server'],
+    },
+    {
+        label: 'Cloud',
+        outlined: false,
+        skills: ['AWS Lambda', 'AWS SQS/SNS', 'AWS RDS', 'Firebase'],
+    },
+    {
+        label: 'Testing',
+        outlined: false,
+        skills: ['Jest', 'Cypress', 'Cucumber'],
+    },
+    {
+        label: 'Tools',
+        outlined: false,
+        skills: ['Docker', 'GitLab CI/CD'],
+    },
+    {
+        label: 'Also worked with',
+        outlined: true,
+        skills: ['Java', 'Django', 'Flask', 'PHP'],
+    },
 ]

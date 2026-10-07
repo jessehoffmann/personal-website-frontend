@@ -1,39 +1,40 @@
-import React, { useState, useRef } from 'react'
-import ReCAPTCHA from 'react-google-recaptcha'
-import { 
-    TextField, 
-    Button, 
-    Box, 
-    Container,
-    Alert
-} from '@mui/material'
+import React, { useState } from 'react'
+import { TextField, Button, Box, Alert } from '@mui/material'
 import SendIcon from '@mui/icons-material/Send'
+
+type FieldName = 'name' | 'email' | 'message'
+type FieldErrors = Partial<Record<FieldName, string>>
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const ContactForm = () => {
     const [status, setStatus] = useState('')
-    const [isVerified, setIsVerified] = useState(false)
-    const recaptchaRef = useRef<ReCAPTCHA>(null)
+    const [errors, setErrors] = useState<FieldErrors>({})
 
-    const handleRecaptchaChange = (token: string | null) => {
-        setIsVerified(!!token)
+    const clearError = (field: FieldName) => {
+        setErrors((current) =>
+            current[field] ? { ...current, [field]: undefined } : current
+        )
     }
 
-    const submitForm = async (ev: React.FormEvent) => {
+    const submitForm = (ev: React.FormEvent) => {
         ev.preventDefault()
-        
-        if (!isVerified) {
-            setStatus('VERIFY')
-            return
-        }
 
         const form = ev.target as HTMLFormElement
         const data = new FormData(form)
-        
-        // Add reCAPTCHA token to form data
-        const recaptchaToken = await recaptchaRef.current?.executeAsync()
-        if (recaptchaToken) {
-            data.append('g-recaptcha-response', recaptchaToken)
-        }
+        const name = String(data.get('name') || '').trim()
+        const email = String(data.get('email') || '').trim()
+        const message = String(data.get('message') || '').trim()
+        const nextErrors: FieldErrors = {}
+
+        if (!name) nextErrors.name = 'Enter your name'
+        if (!email) nextErrors.email = 'Enter your email'
+        else if (!emailPattern.test(email))
+            nextErrors.email = 'Enter a valid email'
+        if (!message) nextErrors.message = 'Enter a message'
+
+        setErrors(nextErrors)
+        if (Object.keys(nextErrors).length > 0) return
 
         const xhr = new XMLHttpRequest()
         xhr.open(form.method, form.action)
@@ -42,8 +43,7 @@ const ContactForm = () => {
             if (xhr.readyState !== XMLHttpRequest.DONE) return
             if (xhr.status === 200) {
                 setStatus('SUCCESS')
-                recaptchaRef.current?.reset()
-                setIsVerified(false)
+                form.reset()
             } else {
                 setStatus('ERROR')
             }
@@ -52,85 +52,90 @@ const ContactForm = () => {
     }
 
     return (
-        <Container maxWidth="sm" sx={{ mt: 2 }}>
-                <form
-                    onSubmit={submitForm}
-                    action='https://formspree.io/mzbavqpp'
-                    method='POST'
-                >
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, textIndent: 0 }}>
-                        <TextField
-                            disabled={status === 'SUCCESS'}
-                            name='name'
-                            label='Name'
-                            variant='outlined'
-                            required
-                            fullWidth
-                        />
-                        
-                        <TextField
-                            disabled={status === 'SUCCESS'}
-                            name='email'
-                            label='Email'
-                            type='email'
-                            variant='outlined'
-                            required
-                            fullWidth
-                        />
-                        
-                        <TextField
-                            disabled={status === 'SUCCESS'}
-                            name='message'
-                            label='Message'
-                            multiline
-                            rows={4}
-                            variant='outlined'
-                            required
-                            fullWidth
-                        />
+        <form
+            onSubmit={submitForm}
+            action='https://formspree.io/mzbavqpp'
+            method='POST'
+            noValidate
+        >
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 2,
+                    textIndent: 0,
+                }}
+            >
+                <Box
+                    component='input'
+                    type='text'
+                    name='_gotcha'
+                    tabIndex={-1}
+                    autoComplete='off'
+                    aria-hidden='true'
+                    sx={{ display: 'none' }}
+                />
+                <TextField
+                    disabled={status === 'SUCCESS'}
+                    name='name'
+                    label='Name'
+                    variant='outlined'
+                    fullWidth
+                    error={Boolean(errors.name)}
+                    helperText={errors.name}
+                    onChange={() => clearError('name')}
+                />
 
-                        <Box sx={{ display: 'flex', justifyContent: 'center', my: 2 }}>
-                            <ReCAPTCHA
-                                ref={recaptchaRef}
-                                sitekey="6Ld6-U4rAAAAAOd1vtGL_Hj-_QKfJSd3W_57DbQu"
-                                onChange={handleRecaptchaChange}
-                                size="normal"
-                            />
-                        </Box>
+                <TextField
+                    disabled={status === 'SUCCESS'}
+                    name='email'
+                    label='Email'
+                    type='email'
+                    variant='outlined'
+                    fullWidth
+                    error={Boolean(errors.email)}
+                    helperText={errors.email}
+                    onChange={() => clearError('email')}
+                />
 
-                        {status === 'VERIFY' && (
-                            <Alert severity="warning">
-                                Please verify that you are not a robot
-                            </Alert>
-                        )}
+                <TextField
+                    disabled={status === 'SUCCESS'}
+                    name='message'
+                    label='Message'
+                    multiline
+                    rows={4}
+                    variant='outlined'
+                    fullWidth
+                    error={Boolean(errors.message)}
+                    helperText={errors.message}
+                    onChange={() => clearError('message')}
+                />
 
-                        {status === 'SUCCESS' ? (
-                            <Alert severity="success">
-                                Thanks for your message!
-                            </Alert>
-                        ) : (
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                color="primary"
-                                disabled={status === 'SUCCESS' || !isVerified}
-                                endIcon={<SendIcon />}
-                                sx={{ 
-                                    opacity: !isVerified ? 0.5 : 1,
-                                }}
-                            >
-                                Send Message
-                            </Button>
-                        )}
+                {status === 'SUCCESS' ? (
+                    <Alert severity='success'>Thanks for your message!</Alert>
+                ) : (
+                    <Button
+                        type='submit'
+                        variant='contained'
+                        color='primary'
+                        size='large'
+                        endIcon={<SendIcon />}
+                        sx={{
+                            width: { xs: '100%', sm: 'auto' },
+                            alignSelf: { xs: 'stretch', sm: 'flex-start' },
+                        }}
+                    >
+                        Send message
+                    </Button>
+                )}
 
-                        {status === 'ERROR' && (
-                            <Alert severity="error">
-                                Oops! There was an error sending your message.
-                            </Alert>
-                        )}
-                    </Box>
-                </form>
-        </Container>
+                {status === 'ERROR' && (
+                    <Alert severity='error'>
+                        Oops! There was an error sending your message.
+                    </Alert>
+                )}
+            </Box>
+        </form>
     )
 }
 

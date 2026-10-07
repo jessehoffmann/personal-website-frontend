@@ -1,23 +1,33 @@
 import React, { useEffect, useState, useCallback } from 'react'
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
+import { useTheme } from '@mui/material/styles'
 
 //Assets
-import Monogram from '../../static/img/monogram.png'
+import Logo from '../../static/img/jth-logo-circle.png'
 import MobileMenu from './MobileMenu'
-import { 
-    MonogramImage, 
-    StickyHeader, 
-    HeaderContent, 
-    HeaderTitle, 
-    HeaderLinks 
+import {
+    Brand,
+    BrandLink,
+    HeaderContent,
+    HeaderLinkList,
+    HeaderLinks,
+    HeaderNav,
+    HeaderTitle,
+    mobileNavMaxWidthPx,
+    MonogramImage,
+    StickyHeader,
 } from './styled'
-import { ButtonBase } from '@mui/material'
-import { debounce } from 'lodash'
 
-const SCROLL_THRESHOLD = 10
+const navLinks = [
+    { label: 'About', to: '/about' },
+    { label: 'Experience', to: '/experience' },
+    { label: 'Skills', to: '/skills' },
+    { label: 'Contact', to: '/contact' },
+]
 
 const Header: React.FC = () => {
-    const [scrolling, setScrolling] = useState<boolean>(false)
+    const theme = useTheme()
+    const location = useLocation()
     const [windowDimension, setWindowDimension] = useState<number | null>(null)
 
     useEffect(() => {
@@ -33,48 +43,51 @@ const Header: React.FC = () => {
         return () => window.removeEventListener('resize', handleResize)
     }, [handleResize])
 
-    const handleScroll = useCallback(() => {
-        const offset = window.scrollY
-        setScrolling(offset > SCROLL_THRESHOLD)
-    }, [])
-
-    const debouncedScroll = useCallback(
-        debounce(handleScroll, 100),
-        [handleScroll]
-    )
-
-    useEffect(() => {
-        window.addEventListener('scroll', debouncedScroll)
-        return () => window.removeEventListener('scroll', debouncedScroll)
-    }, [debouncedScroll])
-
-    const isMobile = windowDimension && windowDimension <= 720
+    const isMobile =
+        windowDimension !== null && windowDimension <= mobileNavMaxWidthPx
 
     return (
-        <StickyHeader scrolling={scrolling}>
+        <StickyHeader>
             <HeaderContent>
-                <ButtonBase sx={{ ml: { xs: 0, md: '20px' }, mt: '4px' }}>
-                    <Link to='/'>
-                        <MonogramImage src={Monogram} alt='Monogram' />
-                    </Link>
-                </ButtonBase>
-
-                <HeaderTitle>Jesse Thomas Hoffmann</HeaderTitle>
+                <Brand>
+                    <BrandLink to='/' $hoverColor={theme.palette.primary.light}>
+                        <MonogramImage src={Logo} alt='' />
+                        <HeaderTitle $color={theme.palette.primary.main}>
+                            Jesse Thomas Hoffmann
+                        </HeaderTitle>
+                    </BrandLink>
+                </Brand>
 
                 {isMobile ? (
                     <MobileMenu />
                 ) : (
-                    <>
-                        <HeaderLinks>
-                            <Link to='/about'>About</Link>
-                        </HeaderLinks>
-                        <HeaderLinks>
-                            <Link to='/skills'>Skills</Link>
-                        </HeaderLinks>
-                        <HeaderLinks>
-                            <Link to='/contact'>Contact</Link>
-                        </HeaderLinks>
-                    </>
+                    <HeaderNav aria-label='Primary'>
+                        <HeaderLinkList>
+                            {navLinks.map((item) => {
+                                const active = location.pathname === item.to
+                                return (
+                                    <HeaderLinks key={item.to}>
+                                        <Link
+                                            to={item.to}
+                                            aria-current={
+                                                active ? 'page' : undefined
+                                            }
+                                            style={
+                                                active
+                                                    ? {
+                                                          fontWeight: 600,
+                                                          borderBottom: `2px solid ${theme.palette.primary.main}`,
+                                                      }
+                                                    : undefined
+                                            }
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    </HeaderLinks>
+                                )
+                            })}
+                        </HeaderLinkList>
+                    </HeaderNav>
                 )}
             </HeaderContent>
         </StickyHeader>
