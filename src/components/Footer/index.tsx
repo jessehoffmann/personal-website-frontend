@@ -26,6 +26,8 @@ const Footer = () => {
             component='footer'
             sx={{
                 mt: { xs: 5, sm: 8 },
+                flexGrow: 0,
+                flexShrink: 0,
                 borderTop: '1px solid rgba(0, 0, 0, 0.12)',
             }}
         >
@@ -36,7 +38,10 @@ const Footer = () => {
                     ...pageColumnSx,
                     py: 3.5,
                     alignItems: { xs: 'flex-start', sm: 'center' },
-                    justifyContent: 'space-between',
+                    // Avoid space-between in the column layout — if the footer
+                    // ever stretches on mobile, that would shove links to the
+                    // bottom and make the footer look a viewport tall.
+                    justifyContent: { xs: 'flex-start', sm: 'space-between' },
                 }}
             >
                 <Typography

@@ -14,6 +14,7 @@ import Experience from './components/Experience'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import DocumentMeta from './components/DocumentMeta'
+import ScrollToTop from './components/ScrollToTop'
 
 //Styles
 import './static/css/styles.css'
@@ -21,16 +22,20 @@ import './static/css/styles.css'
 const App: React.FC = () => {
     return (
         <Router>
+            <ScrollToTop />
             <DocumentMeta />
             <Box
                 sx={{
                     minHeight: '100vh',
+                    '@supports (min-height: 100dvh)': {
+                        minHeight: '100dvh',
+                    },
                     display: 'flex',
                     flexDirection: 'column',
                 }}
             >
                 <Header />
-                <Box sx={{ flex: '1 0 auto' }}>
+                <Box sx={{ flex: '1 1 auto', width: '100%' }}>
                     <Routes>
                         <Route path='/about' element={<About />} />
                         <Route path='/experience' element={<Experience />} />
