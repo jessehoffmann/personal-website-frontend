@@ -10,7 +10,7 @@ import {
     Typography,
 } from '@mui/material'
 
-import Headshot from '../../static/img/headshot.jpg'
+import Headshot from '../../static/img/jesse-thomas-hoffmann.jpg'
 import DeschutesFrost from '../../static/img/deschutes-frost.webp'
 import { deschutesFrostPreview } from '../../static/img/previews'
 import PageColumn from '../PageColumn'
