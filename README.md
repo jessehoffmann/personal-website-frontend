@@ -31,7 +31,7 @@ npm install
 npm start
 ```
 
-The app will be available at [http://localhost:3000](http://localhost:3000).
+The app will be available at [http://localhost:5173](http://localhost:5173).
 
 ## Development
 
@@ -39,6 +39,7 @@ This project uses:
 
 - React 19
 - TypeScript
+- Vite
 - React Router
 - Material UI (including MUI X Charts)
 - Styled Components + Emotion
@@ -47,11 +48,14 @@ This project uses:
 Additional development commands:
 
 ```bash
-# Run tests
-npm test
+# Start the Vite dev server
+npm run dev
 
 # Build for production
 npm run build
+
+# Preview the production build
+npm run preview
 
 # Lint the project
 npm run lint
