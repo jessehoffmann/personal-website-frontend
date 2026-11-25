@@ -10,7 +10,7 @@ export type Photo = {
 }
 
 export const photographyIntro =
-    'Landscape photography is my creative outlet. These are a few favorites from trails, coastlines, and cities along the way.'
+    'Landscape photography is my creative outlet. These are a few of my favorite photos from over the years.'
 
 export const photos: Photo[] = [
     {
