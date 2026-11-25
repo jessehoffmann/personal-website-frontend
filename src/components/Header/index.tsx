@@ -22,6 +22,7 @@ const navLinks = [
     { label: 'About', to: '/about' },
     { label: 'Experience', to: '/experience' },
     { label: 'Skills', to: '/skills' },
+    { label: 'Photography', to: '/photography' },
     { label: 'Contact', to: '/contact' },
 ]
 

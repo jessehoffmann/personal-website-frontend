@@ -1,6 +1,6 @@
 import Backpacking from '../../static/img/backpacking.webp'
 import Espresso from '../../static/img/espresso.webp'
-import SurfersSunset from '../../static/img/surfers-sunset.webp'
+import SurfersSunset from '../../static/img/photography/surfers-sunset.webp'
 
 export const aboutBio = [
     "I'm a software engineering lead with broad expertise in full-stack software development and architecture. I specialize in optimizing development processes and guiding engineers to deliver high quality software while fostering a culture of collaboration and continuous improvement.",
@@ -31,6 +31,7 @@ type Interest = {
     photoLabel?: string
     linkLabel?: string
     href?: string
+    to?: string
 }
 
 export const interests: Interest[] = [
@@ -50,6 +51,8 @@ export const interests: Interest[] = [
         photoAlt: 'Two surfers carrying boards along a cliff at sunset',
         caption:
             'My creative outlet is landscape photography. It brings me closer to nature, and I love capturing the emotion of a moment in time.',
+        linkLabel: 'See my photography',
+        to: '/photography',
     },
     {
         title: 'Coffee',
@@ -61,4 +64,5 @@ export const interests: Interest[] = [
     },
 ]
 
-export const photoCredit = 'All the landscape photography you see on this site was taken by me, Jesse Thomas Hoffmann.'
+export const photoCredit =
+    'All the landscape photography you see on this site was taken by me, Jesse Thomas Hoffmann.'

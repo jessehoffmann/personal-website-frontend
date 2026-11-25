@@ -8,7 +8,7 @@ interface MenuListProps {
     visible: boolean
 }
 
-export const mobileNavMaxWidthPx = 720
+export const mobileNavMaxWidthPx = 880
 // Logo is 40px. Bottom padding is 11px so this height, including the
 // 1px border, matches the top of the Home item in the mobile menu.
 export const mobileHeaderHeightPx = 64

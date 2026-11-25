@@ -9,6 +9,7 @@ import Contact from './components/Contact'
 // import Resume from './components/Resume';
 import Skills from './components/Skills'
 import Experience from './components/Experience'
+import Photography from './components/Photography'
 
 // components
 import Header from './components/Header'
@@ -43,6 +44,7 @@ const App: React.FC = () => {
                         {/* <Route path='/resume' element={<Resume />} /> */}
                         <Route path='/' element={<Home />} />
                         <Route path='/skills' element={<Skills />} />
+                        <Route path='/photography' element={<Photography />} />
                     </Routes>
                 </Box>
                 <Footer />

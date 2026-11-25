@@ -24,6 +24,11 @@ const pages: Record<string, { title: string; description: string }> = {
         description:
             'Leadership skills and the technology Jesse Thomas Hoffmann works in, from mentoring and delivery to coding languages and frameworks.',
     },
+    '/photography': {
+        title: `Photography | ${siteName}`,
+        description:
+            'Landscape photography by Jesse Thomas Hoffmann, from the Icelandic highlands to Pacific Northwest rain forests and the coast.',
+    },
     '/contact': {
         title: `Contact | ${siteName}`,
         description:

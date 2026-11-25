@@ -23,6 +23,7 @@ const navItems = [
     { text: 'About', to: '/about' },
     { text: 'Experience', to: '/experience' },
     { text: 'Skills', to: '/skills' },
+    { text: 'Photography', to: '/photography' },
     { text: 'Contact', to: '/contact' },
 ]
 

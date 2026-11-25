@@ -10,7 +10,7 @@ import {
     Typography,
 } from '@mui/material'
 
-import BackgroundLandscape from '../../static/img/fjallabak-2025-jesse-thomas-hoffmann.webp'
+import BackgroundLandscape from '../../static/img/photography/fjallabak.webp'
 import { fjallabakPreview } from '../../static/img/previews'
 import PageColumn from '../PageColumn'
 import ProgressiveBackground from '../common/ProgressiveBackground'

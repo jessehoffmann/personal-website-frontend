@@ -11,7 +11,7 @@ import {
 } from '@mui/material'
 
 import Headshot from '../../static/img/jesse-thomas-hoffmann.jpg'
-import DeschutesFrost from '../../static/img/deschutes-frost.webp'
+import DeschutesFrost from '../../static/img/photography/deschutes-frost.webp'
 import { deschutesFrostPreview } from '../../static/img/previews'
 import PageColumn from '../PageColumn'
 import PageHeader from '../PageHeader'
@@ -199,7 +199,18 @@ const About = () => {
                                         >
                                             {interest.caption}
                                         </Typography>
-                                        {interest.linkLabel && (
+                                        {interest.linkLabel && interest.to && (
+                                            <Link
+                                                component={RouterLink}
+                                                to={interest.to}
+                                                color='primary'
+                                                underline='hover'
+                                                sx={{ width: 'fit-content' }}
+                                            >
+                                                {interest.linkLabel}
+                                            </Link>
+                                        )}
+                                        {interest.linkLabel && !interest.to && (
                                             <Link
                                                 href={
                                                     interest.href || undefined
