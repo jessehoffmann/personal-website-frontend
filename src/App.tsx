@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
-// import Resume from './components/Resume';
 import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Photography from './components/Photography'
@@ -41,7 +40,6 @@ const App: React.FC = () => {
                         <Route path='/about' element={<About />} />
                         <Route path='/experience' element={<Experience />} />
                         <Route path='/contact' element={<Contact />} />
-                        {/* <Route path='/resume' element={<Resume />} /> */}
                         <Route path='/' element={<Home />} />
                         <Route path='/skills' element={<Skills />} />
                         <Route path='/photography' element={<Photography />} />

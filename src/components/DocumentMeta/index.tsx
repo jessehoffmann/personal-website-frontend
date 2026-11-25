@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 const siteName = 'Jesse Thomas Hoffmann'
+const siteUrl = 'https://jessehoffmann.com'
 
 const pages: Record<string, { title: string; description: string }> = {
     '/': {
@@ -36,15 +37,25 @@ const pages: Record<string, { title: string; description: string }> = {
     },
 }
 
+const setAttr = (selector: string, attr: string, value: string) => {
+    document.querySelector(selector)?.setAttribute(attr, value)
+}
+
 const DocumentMeta = () => {
     const { pathname } = useLocation()
 
     useEffect(() => {
         const page = pages[pathname] ?? pages['/']
+        const url = `${siteUrl}${pages[pathname] ? pathname : '/'}`
+
         document.title = page.title
-        document
-            .querySelector('meta[name="description"]')
-            ?.setAttribute('content', page.description)
+        setAttr('meta[name="description"]', 'content', page.description)
+        setAttr('link[rel="canonical"]', 'href', url)
+        setAttr('meta[property="og:title"]', 'content', page.title)
+        setAttr('meta[property="og:description"]', 'content', page.description)
+        setAttr('meta[property="og:url"]', 'content', url)
+        setAttr('meta[name="twitter:title"]', 'content', page.title)
+        setAttr('meta[name="twitter:description"]', 'content', page.description)
     }, [pathname])
 
     return null
